@@ -2,7 +2,7 @@
 
 .home {
   .home__header-img {
-    margin-bottom: 5.5rem;
+    margin-bottom: 7rem;
   }
 
   .home__img {
@@ -10,17 +10,20 @@
     object-fit: cover;
   }
 
+  section {
+    margin-inline: 15vw;
+    margin-bottom: 7rem;
+  }
+
   .paragraph {
     @include flexCenter;
-    margin-inline: 15vw;
     gap: 3rem;
-    margin-bottom: 5.5rem;
   }
 
   .text {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.5rem;
 
     a {
       display: block;
@@ -30,5 +33,100 @@
     i {
       font-size: 1rem;
     }
+  }
+}
+
+.reviews {
+  .grid-container {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    gap: 1rem calc(1rem + 5vw);
+  }
+
+  h2 {
+    margin-bottom: 1.5rem;
+  }
+
+  .review__row-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+
+    padding-block: 0.5rem;
+    border-bottom: 1px solid #3a3a3a;
+  }
+
+  .review__name span {
+    padding-inline: 0.5rem;
+    font-size: 1.3rem;
+    color: #3a3a3a;
+  }
+
+  .review__text {
+    padding-block: 0.5rem;
+  }
+
+  .stars {
+    width: 7.25rem;
+  }
+
+  .grid-container::after {
+    content: '';
+    position: absolute;
+    top: 0.9rem;
+    left: 50%;
+
+    width: 1px;
+    height: 93%;
+    background: #3a3a3a;
+  }
+}
+
+.reservation-container {
+  @include flexCenter;
+}
+
+.reservation {
+  position: relative;
+  margin-bottom: 6rem;
+  padding: 2rem 2.75rem;
+
+  color: $white-txt;
+  font-size: 1.8rem;
+  text-decoration: none;
+
+  outline: 4px solid $body-bg;
+  border: 4px solid #5e353d;
+  outline-offset: -0.5rem;
+  background: url('/assets/vines.svg');
+  background-color: #5e353d;
+  transition: 200ms ease;
+
+  &:hover {
+    border-color: #76444e;
+  }
+
+  &:active {
+    transform: scale(1.03);
+    border-color: #522830;
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    bottom: 1.9rem;
+    left: 2.85rem;
+
+    width: 0%;
+    height: 1px;
+    background: #e0e0e0;
+
+    transition: 200ms ease;
+  }
+
+  &:hover::after {
+    width: 14.1rem;
   }
 }
