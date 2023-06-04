@@ -1,0 +1,44 @@
+@use '../abstracts' as *;
+
+nav {
+  @include flexCenter;
+  padding: 0.75rem;
+  border-top: 1px solid #ffffff19;
+  background: $nav-bg;
+  box-shadow: 0 0 15px rgb(0 0 0 / 0.25);
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  ul {
+    display: flex;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    gap: 1.75rem;
+  }
+
+  li {
+    position: relative;
+    list-style: none;
+
+    &::after {
+      position: absolute;
+      content: '';
+      bottom: -2px;
+      left: 0;
+
+      width: 0%;
+      height: 1px;
+      border-radius: 5px;
+      background: #e0e0e0;
+
+      transition: 175ms ease;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
+}

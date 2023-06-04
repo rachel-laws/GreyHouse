@@ -1,0 +1,53 @@
+@use '../abstracts' as *;
+
+// Header
+
+header {
+  background: $header-bg;
+  display: grid;
+  justify-content: center;
+
+  img {
+    max-width: 15rem;
+    margin: auto;
+    padding: 0.5rem;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+// Info
+
+.infobar {
+  display: flex;
+  gap: 1rem;
+  padding: 0.5rem 0.75rem 0.25rem;
+
+  i {
+    margin-right: 0.25rem;
+    padding: 2px;
+    font-size: 0.9rem;
+    transition: 125ms ease;
+  }
+}
+
+// Socials
+
+.instagram i {
+  font-size: 0.95rem;
+}
+
+.facebook:hover {
+  color: #7198eb;
+}
+
+.instagram:hover {
+  color: #ff5188;
+}
+
+.yelp:hover {
+  color: rgb(255, 56, 56);
+}
