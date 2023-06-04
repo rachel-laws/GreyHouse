@@ -2,10 +2,13 @@
 
 nav {
   @include flexCenter;
+  position: sticky;
+  top: 0;
+  z-index: 99;
   padding: 0.75rem;
-  border-top: 1px solid #ffffff19;
+  border-top: 1px solid #ffffff11;
   background: $nav-bg;
-  box-shadow: 0 0 15px rgb(0 0 0 / 0.25);
+  box-shadow: 0 0 20px rgb(0 0 0 / 0.7);
 
   a {
     color: inherit;
@@ -31,7 +34,7 @@ nav {
 
       width: 0%;
       height: 1px;
-      border-radius: 5px;
+      border-radius: 50%;
       background: #e0e0e0;
 
       transition: 175ms ease;
