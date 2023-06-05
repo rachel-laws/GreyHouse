@@ -32,7 +32,8 @@ body p {
   line-height: 1.5;
 }
 body a {
-  color: #95a0c3;
+  color: #91a0d2;
+  transition: 150ms;
 }
 
 header {
@@ -65,6 +66,9 @@ header a {
 }
 .infobar .phone {
   margin-top: -2.5px; /* Fixes bottom gap from font */
+}
+.infobar .email:hover {
+  text-decoration: underline;
 }
 .infobar .phone::after,
 .infobar .email::after {
@@ -128,12 +132,89 @@ nav li:hover::after {
   width: 100%;
 }
 
+footer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10vw;
+  padding: 1rem;
+  font-size: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.0862745098);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(90deg, #0a0a0a, #000 35%, #000 65%, #0a0a0a);
+}
+footer img {
+  max-width: 9em;
+}
+footer a {
+  color: #f5f5f5;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+footer .find-us,
+footer .hours {
+  width: 17rem;
+}
+footer .find-us p,
+footer .hours p {
+  margin-bottom: 0rem;
+}
+footer .find-us i,
+footer .hours i {
+  font-size: 0.8rem;
+}
+footer .footer__heading {
+  position: relative;
+  font-size: 1.2rem;
+}
+footer .find-us .footer__heading {
+  margin-bottom: 0.25rem;
+}
+footer .find-us .footer__heading::after {
+  content: "";
+  position: absolute;
+  width: 22%;
+  height: 1px;
+  left: 0;
+  bottom: 1px;
+  background: #f5f5f5;
+}
+footer .hours .footer__heading {
+  margin-bottom: 0.25rem;
+}
+footer .hours .footer__heading::after {
+  content: "";
+  position: absolute;
+  width: 17%;
+  height: 1px;
+  left: 0;
+  bottom: 1px;
+  background: #f5f5f5;
+}
+footer .footer__contact span {
+  margin-inline: 8px;
+}
+footer .copyright {
+  position: absolute;
+  right: 2rem;
+  bottom: 1.2rem;
+  font-size: 0.9rem;
+  color: #cecece;
+}
+footer .copyright i {
+  font-size: 0.7rem;
+}
+
 .home .home__header-img {
   margin-bottom: 7rem;
 }
 .home .home__img {
   max-width: 35vw;
   object-fit: cover;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 .home section {
   margin-inline: 15vw;
@@ -152,6 +233,9 @@ nav li:hover::after {
 .home .text a {
   display: block;
   width: 7rem;
+}
+.home .text a:hover {
+  color: #a6b4e3;
 }
 .home .text i {
   font-size: 1rem;
@@ -210,6 +294,7 @@ nav li:hover::after {
   outline: 4px solid #141414;
   border: 4px solid #5e353d;
   outline-offset: -0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   background: url("/assets/vines.svg");
   background-color: #5e353d;
   transition: 200ms ease;

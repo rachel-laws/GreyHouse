@@ -39,6 +39,10 @@ header {
     margin-top: -2.5px; /* Fixes bottom gap from font */
   }
 
+  .email:hover {
+    text-decoration: underline;
+  }
+
   .phone::after,
   .email::after {
     content: '|';
