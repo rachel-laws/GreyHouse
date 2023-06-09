@@ -27,6 +27,10 @@ header {
   padding: 0.5rem 0.75rem 0.25rem;
   font-size: 1rem;
 
+  @include mqw {
+    font-size: 0.9rem;
+  }
+
   i {
     margin-right: 0.25rem;
     margin-top: -2px;

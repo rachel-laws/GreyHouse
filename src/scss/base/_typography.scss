@@ -9,6 +9,10 @@ h2 {
   font-size: 2.5rem;
   font-weight: normal;
   margin-top: -8px; /*Fixes top space from font */
+
+  @include mqw {
+    font-size: 2rem;
+  }
 }
 
 body {
@@ -22,5 +26,9 @@ body {
   a {
     color: $link-txt;
     transition: 150ms;
+  }
+
+  @include mqw {
+    font-size: 1.05rem !important;
   }
 }

@@ -20,6 +20,10 @@ nav {
     text-transform: uppercase;
     font-size: 1.1rem;
     gap: 2rem;
+
+    @include mqw {
+      font-size: 1rem;
+    }
   }
 
   li {

@@ -4,22 +4,45 @@
   .home__header-img {
     margin-bottom: 7rem;
     box-shadow: 0 0 25px rgb(0 0 0 / 0.4);
+
+    @include mqw {
+      margin-bottom: 3rem;
+    }
   }
 
   .home__img {
     max-width: 35vw;
     object-fit: cover;
     box-shadow: 0 0 10px rgb(0 0 0 / 0.3);
+
+    @include mqw {
+      max-width: 100%;
+    }
   }
 
   section {
     margin-inline: 15vw;
     margin-bottom: 7rem;
+
+    @include mqw {
+      margin-inline: calc(0.5rem + 8vw);
+      margin-bottom: 3rem;
+    }
   }
 
   .paragraph {
     @include flexCenter;
     gap: 3rem;
+
+    @include mqw {
+      flex-direction: column-reverse;
+    }
+  }
+
+  #location {
+    @include mqw {
+      flex-direction: column;
+    }
   }
 
   .text {
@@ -49,6 +72,10 @@
     grid-template-columns: 1fr 1fr;
     justify-content: space-between;
     gap: 1rem calc(1rem + 5vw);
+
+    @include mqw {
+      grid-template-columns: 1fr;
+    }
   }
 
   h2 {
@@ -87,6 +114,11 @@
     width: 1px;
     height: 93%;
     background: #3a3a3a;
+
+    @include mqw {
+      width: 0px;
+      background: transparent;
+    }
   }
 }
 

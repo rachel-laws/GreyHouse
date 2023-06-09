@@ -13,6 +13,10 @@ footer {
   box-shadow: 0 0 15px rgb(0 0 0 / 0.2);
   background: $footer-bg;
 
+  @include mqw {
+    font-size: 0.9rem;
+  }
+
   img {
     max-width: 9em;
   }
@@ -78,10 +82,10 @@ footer {
 
   .copyright {
     position: absolute;
-    right: 2rem;
-    bottom: 1.2rem;
+    right: 0.5rem;
+    bottom: 0.4rem;
     font-size: 0.9rem;
-    color: #cecece;
+    color: #b8b8b8;
 
     i {
       font-size: 0.7rem;
