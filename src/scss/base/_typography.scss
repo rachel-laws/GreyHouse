@@ -10,7 +10,7 @@ h2 {
   font-weight: normal;
   margin-top: -8px; /*Fixes top space from font */
 
-  @include mqw {
+  @include mqMedium {
     font-size: 2rem;
   }
 }
@@ -28,7 +28,7 @@ body {
     transition: 150ms;
   }
 
-  @include mqw {
+  @include mqMedium {
     font-size: 1.05rem !important;
   }
 }

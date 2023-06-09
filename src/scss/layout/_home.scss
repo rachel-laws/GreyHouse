@@ -5,7 +5,7 @@
     margin-bottom: 7rem;
     box-shadow: 0 0 25px rgb(0 0 0 / 0.4);
 
-    @include mqw {
+    @include mqMedium {
       margin-bottom: 3rem;
     }
   }
@@ -15,8 +15,9 @@
     object-fit: cover;
     box-shadow: 0 0 10px rgb(0 0 0 / 0.3);
 
-    @include mqw {
+    @include mqMedium {
       max-width: 100%;
+      margin-top: 0.5rem;
     }
   }
 
@@ -24,9 +25,9 @@
     margin-inline: 15vw;
     margin-bottom: 7rem;
 
-    @include mqw {
-      margin-inline: calc(0.5rem + 8vw);
-      margin-bottom: 3rem;
+    @include mqMedium {
+      margin-inline: 10vw;
+      margin-bottom: 4rem;
     }
   }
 
@@ -34,13 +35,14 @@
     @include flexCenter;
     gap: 3rem;
 
-    @include mqw {
+    @include mqMedium {
       flex-direction: column-reverse;
+      gap: 1.5rem;
     }
   }
 
   #location {
-    @include mqw {
+    @include mqMedium {
       flex-direction: column;
     }
   }
@@ -73,13 +75,17 @@
     justify-content: space-between;
     gap: 1rem calc(1rem + 5vw);
 
-    @include mqw {
+    @include mqMedium {
       grid-template-columns: 1fr;
     }
   }
 
   h2 {
     margin-bottom: 1.5rem;
+
+    @include mqMedium {
+      margin-bottom: 1rem;
+    }
   }
 
   .review__row-container {
@@ -89,10 +95,14 @@
 
     padding-block: 0.5rem;
     border-bottom: 1px solid #3a3a3a;
+
+    @include mqSmall {
+      flex-direction: column;
+    }
   }
 
   .review__name span {
-    padding-inline: 0.5rem;
+    padding-inline: 0.25rem;
     font-size: 1.3rem;
     color: #3a3a3a;
   }
@@ -103,6 +113,11 @@
 
   .stars {
     width: 7.25rem;
+
+    @include mqMedium {
+      width: 7rem;
+      margin-block: 3px 2px;
+    }
   }
 
   .grid-container::after {
@@ -115,7 +130,7 @@
     height: 93%;
     background: #3a3a3a;
 
-    @include mqw {
+    @include mqMedium {
       width: 0px;
       background: transparent;
     }

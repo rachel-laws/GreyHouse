@@ -68,7 +68,7 @@ body a {
   .reservation {
     margin-inline: 0.5rem;
     font-size: clamp(1rem, 6vw, 1.3rem);
-    margin-bottom: 5rem;
+    margin-bottom: 4.5rem;
   }
 }
 .reservation:hover {
@@ -219,10 +219,35 @@ footer {
 @media all and (max-width: 950px) {
   footer {
     font-size: 0.9rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0rem;
+    padding-top: 1.5rem;
+    padding-inline: 2rem;
+  }
+}
+@media all and (max-width: 470px) {
+  footer {
+    padding-top: 1rem;
+    padding-inline: 1rem;
+    gap: 1rem;
   }
 }
 footer img {
   max-width: 9em;
+}
+@media all and (max-width: 950px) {
+  footer img {
+    order: 3;
+    margin-left: auto;
+    margin-bottom: 2.25rem;
+  }
+}
+@media all and (max-width: 470px) {
+  footer img {
+    width: 0px;
+    height: 0px;
+  }
 }
 footer a {
   color: #f5f5f5;
@@ -235,13 +260,19 @@ footer .find-us,
 footer .hours {
   width: 17rem;
 }
-footer .find-us p,
-footer .hours p {
-  margin-bottom: 0rem;
-}
 footer .find-us i,
 footer .hours i {
   font-size: 0.8rem;
+}
+@media all and (max-width: 950px) {
+  footer .hours {
+    grid-column: 1;
+  }
+}
+@media all and (max-width: 950px) {
+  footer .find-us {
+    grid-column: 1;
+  }
 }
 footer .footer__heading {
   position: relative;
@@ -276,13 +307,26 @@ footer .footer__contact span {
 }
 footer .copyright {
   position: absolute;
-  right: 0.5rem;
-  bottom: 0.4rem;
+  top: 0.5rem;
+  right: 1rem;
   font-size: 0.9rem;
-  color: #b8b8b8;
+  color: #b0b0b0;
 }
 footer .copyright i {
   font-size: 0.7rem;
+}
+@media all and (max-width: 950px) {
+  footer .copyright {
+    top: auto;
+    bottom: 2rem;
+    right: 2.3rem;
+    font-size: 0.8rem;
+  }
+}
+@media all and (max-width: 470px) {
+  footer .copyright {
+    top: 1.3rem;
+  }
 }
 
 ::-webkit-scrollbar {
@@ -326,6 +370,7 @@ footer .copyright i {
 @media all and (max-width: 950px) {
   .home .home__img {
     max-width: 100%;
+    margin-top: 0.5rem;
   }
 }
 .home section {
@@ -334,8 +379,8 @@ footer .copyright i {
 }
 @media all and (max-width: 950px) {
   .home section {
-    margin-inline: calc(0.5rem + 8vw);
-    margin-bottom: 3rem;
+    margin-inline: 10vw;
+    margin-bottom: 4rem;
   }
 }
 .home .paragraph {
@@ -346,6 +391,7 @@ footer .copyright i {
 @media all and (max-width: 950px) {
   .home .paragraph {
     flex-direction: column-reverse;
+    gap: 1.5rem;
   }
 }
 @media all and (max-width: 950px) {
@@ -384,6 +430,11 @@ footer .copyright i {
 .reviews h2 {
   margin-bottom: 1.5rem;
 }
+@media all and (max-width: 950px) {
+  .reviews h2 {
+    margin-bottom: 1rem;
+  }
+}
 .reviews .review__row-container {
   position: relative;
   display: flex;
@@ -391,8 +442,13 @@ footer .copyright i {
   padding-block: 0.5rem;
   border-bottom: 1px solid #3a3a3a;
 }
+@media all and (max-width: 470px) {
+  .reviews .review__row-container {
+    flex-direction: column;
+  }
+}
 .reviews .review__name span {
-  padding-inline: 0.5rem;
+  padding-inline: 0.25rem;
   font-size: 1.3rem;
   color: #3a3a3a;
 }
@@ -401,6 +457,12 @@ footer .copyright i {
 }
 .reviews .stars {
   width: 7.25rem;
+}
+@media all and (max-width: 950px) {
+  .reviews .stars {
+    width: 7rem;
+    margin-block: 3px 2px;
+  }
 }
 .reviews .grid-container::after {
   content: "";

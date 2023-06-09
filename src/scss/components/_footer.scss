@@ -13,12 +13,34 @@ footer {
   box-shadow: 0 0 15px rgb(0 0 0 / 0.2);
   background: $footer-bg;
 
-  @include mqw {
+  @include mqMedium {
     font-size: 0.9rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0rem;
+    padding-top: 1.5rem;
+    padding-inline: 2rem;
+  }
+
+  @include mqSmall {
+    padding-top: 1rem;
+    padding-inline: 1rem;
+    gap: 1rem;
   }
 
   img {
     max-width: 9em;
+
+    @include mqMedium {
+      order: 3;
+      margin-left: auto;
+      margin-bottom: 2.25rem;
+    }
+
+    @include mqSmall {
+      width: 0px;
+      height: 0px;
+    }
   }
 
   a {
@@ -34,12 +56,20 @@ footer {
   .hours {
     width: 17rem;
 
-    p {
-      margin-bottom: 0rem;
-    }
-
     i {
       font-size: 0.8rem;
+    }
+  }
+
+  .hours {
+    @include mqMedium {
+      grid-column: 1;
+    }
+  }
+
+  .find-us {
+    @include mqMedium {
+      grid-column: 1;
     }
   }
 
@@ -82,13 +112,24 @@ footer {
 
   .copyright {
     position: absolute;
-    right: 0.5rem;
-    bottom: 0.4rem;
+    top: 0.5rem;
+    right: 1rem;
     font-size: 0.9rem;
-    color: #b8b8b8;
+    color: #b0b0b0;
 
     i {
       font-size: 0.7rem;
+    }
+
+    @include mqMedium {
+      top: auto;
+      bottom: 2rem;
+      right: 2.3rem;
+      font-size: 0.8rem;
+    }
+
+    @include mqSmall {
+      top: 1.3rem;
     }
   }
 }

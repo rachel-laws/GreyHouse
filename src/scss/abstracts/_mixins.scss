@@ -3,8 +3,14 @@
   justify-content: center;
 }
 
-@mixin mqw {
+@mixin mqMedium {
   @media all and (max-width: 950px) {
+    @content;
+  }
+}
+
+@mixin mqSmall {
+  @media all and (max-width: 470px) {
     @content;
   }
 }

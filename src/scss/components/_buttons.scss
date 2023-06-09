@@ -21,7 +21,7 @@
 
   transition: 200ms ease;
 
-  @include mqw {
+  @include mqMedium {
     margin-inline: 0.5rem;
     font-size: clamp(1rem, 6vw, 1.3rem);
     margin-bottom: 4.5rem;
@@ -52,7 +52,7 @@
   &:hover::after {
     width: 70%;
 
-    @include mqw {
+    @include mqMedium {
       background: transparent;
       width: 0;
     }
