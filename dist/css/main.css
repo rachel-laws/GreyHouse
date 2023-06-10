@@ -13,6 +13,20 @@ body {
   background: #141414;
 }
 
+.sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
+
 html {
   font-family: "Belleza", sans-serif;
 }
@@ -353,6 +367,14 @@ footer .copyright i {
     scrollbar-width: thin;
   }
 }
+.home .img-container {
+  overflow: hidden;
+}
+@media all and (max-width: 470px) {
+  .home .img-container {
+    height: 200%;
+  }
+}
 .home .home__header-img {
   margin-bottom: 7rem;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
@@ -360,6 +382,12 @@ footer .copyright i {
 @media all and (max-width: 950px) {
   .home .home__header-img {
     margin-bottom: 3rem;
+  }
+}
+@media all and (max-width: 470px) {
+  .home .home__header-img {
+    transform: scale(1.3);
+    margin-bottom: 4rem;
   }
 }
 .home .home__img {

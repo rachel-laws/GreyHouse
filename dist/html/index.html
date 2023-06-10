@@ -18,16 +18,25 @@
   <body>
     <header>
       <div class="infobar">
-        <a class="email" href="">info@grayhouse.com</a>
-        <p class="phone">1-734-123-4567</p>
+        <a class="email" href="">
+          <span class="sr-only">Email:</span>
+          info@grayhouse.com
+        </a>
+        <p class="phone">
+          <span class="sr-only">Phone Number:</span>
+          1-734-123-4567
+        </p>
         <div class="socials">
           <a class="facebook" href="">
+            <span class="sr-only">Facebook</span>
             <i class="fa-brands fa-facebook-f"></i>
           </a>
           <a class="instagram" href="">
+            <span class="sr-only">Instagram</span>
             <i class="fa-brands fa-instagram"></i>
           </a>
           <a class="yelp" href="">
+            <span class="sr-only">Yelp</span>
             <i class="fa-brands fa-yelp"></i>
           </a>
         </div>
@@ -44,10 +53,13 @@
       </ul>
     </nav>
     <main class="home">
-      <img
-        src="/assets/header.jpg"
-        alt="Display of fresh breads, vegetables and fish on a wooden table"
-        class="home__header-img" />
+      <div class="img-container">
+        <img
+          src="/assets/header.jpg"
+          alt="Display of fresh breads, salads, and fish on a wooden table"
+          class="home__header-img" />
+      </div>
+      <a href="#location" class="sr-only">Skip to next section</a>
       <section id="welcome" class="paragraph">
         <img
           src="/assets/home_1.jpg"
@@ -72,6 +84,7 @@
           </p>
         </div>
       </section>
+      <a href="#reviews" class="sr-only">Skip to next section</a>
       <section id="location" class="paragraph">
         <div class="text">
           <h2>Our Location</h2>
@@ -154,11 +167,18 @@
       <div class="find-us">
         <p class="footer__heading">Find Us</p>
         <p>
-          <i class="fa-solid fa-location-dot"></i> Karma 1105, Zadar, Croatia
-          23000
+          <i class="fa-solid fa-location-dot"></i>
+          <span class="sr-only">Address:</span>
+          Karma 1105, Zadar, Croatia 23000
         </p>
         <p class="footer__contact">
-          <a href="">info@grayhouse.com</a> <span>|</span> 1-734-123-4567
+          <a href="">
+            <span class="sr-only">Email:</span>
+            info@grayhouse.com
+          </a>
+          <span>|</span>
+          <span class="sr-only">Phone:</span>
+          1-734-123-4567
         </p>
       </div>
       <img class="footer__logo" src="/assets/logo.png" alt="Gray House" />
@@ -168,7 +188,9 @@
         <p>Saturday - Sunday: 11am - 8pm</p>
       </div>
       <p class="copyright">
-        <i class="fa-regular fa-copyright"></i> 2023 by Gray House
+        <i class="fa-regular fa-copyright"></i>
+        <span class="sr-only">Copyright</span>
+        2023 by Gray House
       </p>
     </footer>
     <script src="../script.js"></script>
