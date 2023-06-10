@@ -17,7 +17,10 @@
   </head>
   <body>
     <header>
+      <h1 id="home__heading" class="sr-only">Gray House Restaurant</h1>
       <div class="infobar">
+        <p class="sr-only">Contact Information</p>
+        <a href="#welcome" class="sr-only">Skip link: Skip to navigation bar</a>
         <a class="email" href="">
           <span class="sr-only">Email:</span>
           info@grayhouse.com
@@ -43,7 +46,10 @@
       </div>
       <img src="/assets/logo.png" alt="Gray House" class="logo" />
     </header>
-    <nav id="navbar">
+    <nav aria-label="Navigation" id="navbar">
+      <a href="#welcome" class="sr-only">
+        Skip link: Skip to home page content
+      </a>
       <ul>
         <li><a href="">Home</a></li>
         <li><a href="">Menu</a></li>
@@ -59,14 +65,16 @@
           alt="Display of fresh breads, salads, and fish on a wooden table"
           class="home__header-img" />
       </div>
-      <a href="#location" class="sr-only">Skip to next section</a>
       <section id="welcome" class="paragraph">
         <img
           src="/assets/home_1.jpg"
           alt="Dining table with wine and lobster overlooking the sea"
           class="home__img" />
         <div class="text">
-          <h1>Welcome to Gray House</h1>
+          <h2>Welcome to Gray House</h2>
+          <a href="#location" class="sr-only">
+            Skip link: Skip to location section
+          </a>
           <p>
             Gray House offers an unforgettable culinary experience. Our
             award-winning Chef specializes in authentic Mediterranean cuisine
@@ -84,10 +92,12 @@
           </p>
         </div>
       </section>
-      <a href="#reviews" class="sr-only">Skip to next section</a>
       <section id="location" class="paragraph">
         <div class="text">
           <h2>Our Location</h2>
+          <a href="#reviews" class="sr-only">
+            Skip link: Skip to guest reviews section
+          </a>
           <p>
             We are located in Zadar, Croatia, directly on the coast of the
             Adriatic Sea. Gray House is a convenient 10-minute walk from the
@@ -112,6 +122,9 @@
       </section>
       <section id="reviews" class="reviews">
         <h2>Guest Reviews</h2>
+        <a href="#home__reservation-btn" class="sr-only">
+          Skip link: Skip to make a reservation
+        </a>
         <div class="grid-container">
           <div class="review">
             <div class="review__row-container">
@@ -159,11 +172,15 @@
           </div>
         </div>
       </section>
-      <div class="reservation-container">
+      <div id="home__reservation-btn" class="reservation-container">
         <a class="reservation" href="">Make a Reservation</a>
       </div>
     </main>
-    <footer>
+    <footer
+      aria-label="Footer containing location, contact information, and hours">
+      <a href="#home__heading" class="sr-only">
+        Skip link: Return to top of page
+      </a>
       <div class="find-us">
         <p class="footer__heading">Find Us</p>
         <p>
