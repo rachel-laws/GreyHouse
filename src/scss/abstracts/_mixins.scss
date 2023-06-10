@@ -20,3 +20,9 @@
     @content;
   }
 }
+
+@mixin mqLarge {
+  @media all and (min-width: 651px) {
+    @content;
+  }
+}

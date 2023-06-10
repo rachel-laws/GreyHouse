@@ -22,9 +22,7 @@ nav {
 
   @include mqNavbar {
     .nav__toggle {
-      position: absolute;
       display: flex;
-      transform: translateX(-2.5rem);
     }
   }
 
@@ -34,24 +32,30 @@ nav {
   }
 
   ul {
+    position: relative;
     display: flex;
     text-transform: uppercase;
     font-size: 1.1rem;
-    gap: 2rem;
 
-    transition: 200ms ease;
+    @include mqLarge {
+      gap: 2rem;
+    }
 
     @include mqMedium {
       font-size: 1rem;
     }
 
     @include mqNavbar {
-      display: none;
+      a:not([aria-current='page']) {
+        display: none;
+      }
     }
   }
 
   .showMobileNav {
-    display: flex !important;
+    a {
+      display: block !important;
+    }
 
     @include mqNavbar {
       flex-direction: column;
@@ -62,11 +66,18 @@ nav {
   }
 
   li {
-    position: relative;
     list-style: none;
+  }
 
-    .active {
-      display: flex;
+  a {
+    position: relative;
+
+    &[aria-current='page'] {
+      &::after {
+        @include mqLarge {
+          width: 100%;
+        }
+      }
     }
 
     &::after {

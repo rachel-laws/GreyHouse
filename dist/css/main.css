@@ -197,9 +197,7 @@ nav .nav__toggle {
 }
 @media all and (max-width: 650px) {
   nav .nav__toggle {
-    position: absolute;
     display: flex;
-    transform: translateX(-2.5rem);
   }
 }
 nav a {
@@ -207,11 +205,15 @@ nav a {
   text-decoration: none;
 }
 nav ul {
+  position: relative;
   display: flex;
   text-transform: uppercase;
   font-size: 1.1rem;
-  gap: 2rem;
-  transition: 200ms ease;
+}
+@media all and (min-width: 651px) {
+  nav ul {
+    gap: 2rem;
+  }
 }
 @media all and (max-width: 950px) {
   nav ul {
@@ -219,12 +221,12 @@ nav ul {
   }
 }
 @media all and (max-width: 650px) {
-  nav ul {
+  nav ul a:not([aria-current=page]) {
     display: none;
   }
 }
-nav .showMobileNav {
-  display: flex !important;
+nav .showMobileNav a {
+  display: block !important;
 }
 @media all and (max-width: 650px) {
   nav .showMobileNav {
@@ -235,13 +237,17 @@ nav .showMobileNav {
   }
 }
 nav li {
-  position: relative;
   list-style: none;
 }
-nav li .active {
-  display: flex;
+nav a {
+  position: relative;
 }
-nav li::after {
+@media all and (min-width: 651px) {
+  nav a[aria-current=page]::after {
+    width: 100%;
+  }
+}
+nav a::after {
   position: absolute;
   content: "";
   bottom: -2px;
@@ -252,7 +258,7 @@ nav li::after {
   background: #e0e0e0;
   transition: 175ms ease;
 }
-nav li:hover::after {
+nav a:hover::after {
   width: 100%;
 }
 
