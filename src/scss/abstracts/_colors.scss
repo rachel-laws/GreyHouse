@@ -1,8 +1,13 @@
 $white-txt: #f5f5f5;
+$dark-txt: #0b0b0b;
+
 $link-txt: #91a0d2;
 $link-hover: #a6b4e3;
 
 $header-bg: linear-gradient(90deg, #111111, #000 35%, #000 65%, #111111);
+$mobile-header-bg: linear-gradient(90deg, #111111, #000 20%, #000 80%, #111111);
+$small-header-bg: #000;
+
 $nav-bg: #040404;
 $body-bg: #141414;
 $footer-bg: linear-gradient(90deg, #0a0a0a, #000 35%, #000 65%, #0a0a0a);

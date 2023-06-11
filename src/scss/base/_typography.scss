@@ -10,7 +10,7 @@ h2 {
   font-weight: normal;
   margin-top: -8px; /*Fixes top space from font */
 
-  @include mqMedium {
+  @include mqNavbar {
     font-size: 2rem;
   }
 }

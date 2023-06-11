@@ -1,1 +1,131 @@
 @use '../abstracts' as *;
+
+.menu {
+  margin-inline: 15vw;
+  margin-bottom: 7rem;
+
+  @include mqMedium {
+    margin-inline: 10vw;
+    margin-bottom: 4rem;
+  }
+
+  @include mqNavbar {
+    margin-inline: 0rem;
+  }
+
+  .menu__container {
+    @include flexCenter;
+    flex-direction: column;
+    margin-block: 2rem 4rem;
+    //TODO: Make margins consistent with variables
+    gap: 2rem;
+  }
+
+  h2 {
+    position: relative;
+
+    &::before {
+      @include pseudoElement;
+      border-bottom: 1px solid $white-txt;
+      width: 80%;
+      top: 55%;
+      left: -100%;
+    }
+
+    &::after {
+      @include pseudoElement;
+      border-bottom: 1px solid $white-txt;
+      width: 80%;
+      top: 55%;
+      right: -100%;
+    }
+  }
+
+  .menu__grid {
+    position: relative;
+    @include gridCenter;
+    grid-template-columns: 1fr 1fr;
+
+    width: 100%;
+    padding: 3rem 0.5rem;
+
+    color: $dark-txt;
+    outline: 4px solid $dark-txt;
+    outline-offset: -8px;
+    background: url('/assets/paper.png');
+    background-repeat: repeat-y;
+  }
+
+  // Title
+
+  .menu__title {
+    grid-column: span 2;
+    @include flexCenter;
+    flex-direction: column;
+    gap: 0.25rem;
+    text-transform: uppercase;
+
+    h3 {
+      position: relative;
+      font-size: 2.8rem;
+      font-weight: 500;
+
+      @include mqNavbar {
+        font-size: 2rem;
+      }
+
+      &::after {
+        @include pseudoElement;
+        border-bottom: 1px solid $dark-txt;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+      }
+    }
+
+    p {
+      font-size: 0.95rem;
+
+      @include mqNavbar {
+        font-size: 0.7rem;
+      }
+    }
+  }
+
+  // Branches
+
+  .menu__branch {
+    position: absolute;
+    width: 10rem;
+
+    @include mqNavbar {
+      width: 8rem;
+    }
+
+    @include mqSmall {
+      display: none;
+    }
+  }
+
+  .branch1 {
+    top: 0rem;
+    left: -0.25rem;
+    transform: rotate(20deg);
+
+    @include mqNavbar {
+      top: 0.75rem;
+    }
+  }
+
+  .branch2 {
+    top: 0.75rem;
+    right: -0.25rem;
+    transform: rotate(200deg);
+
+    @include mqNavbar {
+      top: 1.25rem;
+    }
+  }
+
+  // Main content
+}
