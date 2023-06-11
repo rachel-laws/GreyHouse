@@ -591,8 +591,8 @@ footer .copyright i {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-block: 2rem 4rem;
-  gap: 2rem;
+  margin-block: 3rem 6rem;
+  gap: 3rem;
   overflow: hidden;
 }
 .menu h2 {
@@ -617,18 +617,17 @@ footer .copyright i {
 .menu .menu__grid {
   position: relative;
   display: grid;
-  justify-content: center;
-  align-items: center;
   grid-template-columns: 1fr 1fr;
+  grid-auto-flow: dense;
   width: 100%;
-  padding: 3rem 1rem;
+  padding: 3rem 1rem 0rem;
   color: #0b0b0b;
   outline: 4px solid #0b0b0b;
   outline-offset: -8px;
   background: url("/assets/paper.png");
   background-repeat: repeat-y;
 }
-@media all and (max-width: 650px) {
+@media all and (max-width: 950px) {
   .menu .menu__grid {
     grid-template-columns: 1fr;
   }
@@ -649,7 +648,7 @@ footer .copyright i {
   font-size: 2.8rem;
   font-weight: 500;
 }
-@media all and (max-width: 650px) {
+@media all and (max-width: 950px) {
   .menu .menu__title h3 {
     font-size: 2rem;
   }
@@ -665,7 +664,7 @@ footer .copyright i {
 .menu .menu__title p {
   font-size: 0.95rem;
 }
-@media all and (max-width: 650px) {
+@media all and (max-width: 950px) {
   .menu .menu__title p {
     font-size: 0.7rem;
   }
@@ -674,7 +673,7 @@ footer .copyright i {
   position: absolute;
   width: 10rem;
 }
-@media all and (max-width: 650px) {
+@media all and (max-width: 950px) {
   .menu .menu__branch {
     width: 8rem;
   }
@@ -689,7 +688,7 @@ footer .copyright i {
   left: -0.25rem;
   transform: rotate(20deg);
 }
-@media all and (max-width: 650px) {
+@media all and (max-width: 950px) {
   .menu .branch1 {
     top: 0.75rem;
   }
@@ -699,7 +698,7 @@ footer .copyright i {
   right: -0.25rem;
   transform: rotate(200deg);
 }
-@media all and (max-width: 650px) {
+@media all and (max-width: 950px) {
   .menu .branch2 {
     top: 1.25rem;
   }
@@ -707,15 +706,35 @@ footer .copyright i {
 .menu .menu__section {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.2rem;
   padding-inline: 0.5rem;
-  padding-block: 1rem;
+  padding-block: 1rem 0.5rem;
 }
 .menu .menu__appetizers,
 .menu .menu__entrees,
 .menu .menu__sides,
 .menu .menu__pictures {
   grid-column: 1;
+}
+.menu .menu__soups,
+.menu .menu__desserts,
+.menu .menu__beverages {
+  grid-column: 2;
+}
+@media all and (max-width: 950px) {
+  .menu .menu__soups,
+  .menu .menu__desserts,
+  .menu .menu__beverages {
+    grid-column: 1;
+  }
+}
+.menu .menu__soups-dressings {
+  grid-column: 2;
+}
+@media all and (max-width: 950px) {
+  .menu .menu__soups-dressings {
+    grid-column: 1;
+  }
 }
 .menu .menu__heading {
   position: relative;
@@ -747,6 +766,7 @@ footer .copyright i {
   font-size: 0.8rem;
 }
 .menu .menu__description {
+  margin-top: -2px;
   font-size: 0.8rem;
   color: #595050;
   line-height: 1.3;
@@ -772,17 +792,60 @@ footer .copyright i {
     grid-template-columns: 1fr;
   }
 }
+.menu .menu__soups {
+  gap: 0;
+}
+.menu .menu__soups-container {
+  border: 8px solid #73404a;
+  margin: 0.25rem 0.5rem 0rem;
+  padding: 1rem;
+}
+@media all and (max-width: 950px) {
+  .menu .menu__soups-container {
+    margin: 0.25rem 0rem 0rem;
+  }
+}
+.menu .menu__soups-dressings {
+  margin-inline: 0.5rem;
+  padding: 0.5rem 1.25rem 1rem;
+  height: min-content;
+  font-size: 0.8rem;
+  color: #e4c9cf;
+  background: #73404a;
+}
+@media all and (max-width: 950px) {
+  .menu .menu__soups-dressings {
+    margin: 0rem;
+  }
+}
+.menu .menu__soups-dressings p:first-of-type {
+  position: relative;
+  margin-bottom: 0.25rem;
+}
+.menu .menu__soups-dressings p:first-of-type::after {
+  position: absolute;
+  content: "";
+  width: 65%;
+  top: 50%;
+  right: 0.5rem;
+  border-bottom: 1px solid #a0626e;
+}
+@media all and (max-width: 950px) {
+  .menu .menu__soups-dressings p:first-of-type::after {
+    display: none;
+  }
+}
 .menu .menu__pictures {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  margin-block: 1.25rem 1rem;
+  padding-block: 0.5rem;
+  width: 100%;
   border-top: 2px solid #bc8a94;
   border-bottom: 2px solid #bc8a94;
-  padding-block: 0.5rem;
-  margin-block: 1rem;
-  width: 100%;
 }
-@media all and (max-width: 650px) {
+@media all and (max-width: 950px) {
   .menu .menu__pictures {
     justify-content: center;
     gap: 2vw;
