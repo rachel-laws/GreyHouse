@@ -63,9 +63,26 @@ body a {
   }
 }
 
+#home__reservation-btn {
+  margin-block: 6rem 7rem;
+}
+@media all and (max-width: 950px) {
+  #home__reservation-btn {
+    margin-block: 3rem 5rem;
+  }
+}
+
+#menu__reservation-btn {
+  margin-block: 2rem 5rem;
+}
+@media all and (max-width: 950px) {
+  #menu__reservation-btn {
+    margin-block: 1rem 4rem;
+  }
+}
+
 .reservation {
   position: relative;
-  margin-bottom: 6.5rem;
   padding: 2rem 2.75rem;
   color: #f5f5f5;
   font-size: 1.8rem;
@@ -84,7 +101,6 @@ body a {
   .reservation {
     margin-inline: 0.5rem;
     font-size: clamp(1rem, 6vw, 1.3rem);
-    margin-bottom: 4.5rem;
   }
 }
 .reservation:hover {
@@ -461,6 +477,9 @@ footer .copyright i {
   margin-inline: 15vw;
   margin-bottom: 7rem;
 }
+.home section:last-of-type {
+  margin-bottom: 4rem;
+}
 @media all and (max-width: 950px) {
   .home section {
     margin-inline: 10vw;
@@ -573,12 +592,10 @@ footer .copyright i {
 
 .menu {
   margin-inline: 15vw;
-  margin-bottom: 7rem;
 }
 @media all and (max-width: 950px) {
   .menu {
     margin-inline: 6vw;
-    margin-bottom: 4rem;
   }
 }
 @media all and (max-width: 650px) {
@@ -591,7 +608,7 @@ footer .copyright i {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-block: 3rem 6rem;
+  margin-top: 3rem;
   gap: 3rem;
   overflow: hidden;
 }
@@ -618,9 +635,8 @@ footer .copyright i {
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-auto-flow: dense;
   width: 100%;
-  padding: 3rem 1rem 0rem;
+  padding: 3rem 2rem 0rem;
   color: #0b0b0b;
   outline: 4px solid #0b0b0b;
   outline-offset: -8px;
@@ -710,35 +726,22 @@ footer .copyright i {
   padding-inline: 0.5rem;
   padding-block: 1rem 0.5rem;
 }
-.menu .menu__appetizers,
-.menu .menu__entrees,
-.menu .menu__sides,
-.menu .menu__pictures {
+.menu .col1 {
   grid-column: 1;
 }
-.menu .menu__soups,
-.menu .menu__desserts,
-.menu .menu__beverages {
+.menu .col2 {
   grid-column: 2;
+  padding-left: 1rem;
 }
 @media all and (max-width: 950px) {
-  .menu .menu__soups,
-  .menu .menu__desserts,
-  .menu .menu__beverages {
+  .menu .col2 {
     grid-column: 1;
-  }
-}
-.menu .menu__soups-dressings {
-  grid-column: 2;
-}
-@media all and (max-width: 950px) {
-  .menu .menu__soups-dressings {
-    grid-column: 1;
+    padding: 0rem;
   }
 }
 .menu .menu__heading {
   position: relative;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   margin-inline: auto;
   text-align: center;
   width: 12rem;
@@ -777,7 +780,7 @@ footer .copyright i {
   margin: auto;
   grid-template-columns: 1fr 1fr;
   color: #504646;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 .menu .menu__item-sides .menu__item {
   width: 10rem;
@@ -797,26 +800,25 @@ footer .copyright i {
 }
 .menu .menu__soups-container {
   border: 8px solid #73404a;
-  margin: 0.25rem 0.5rem 0rem;
+  outline: 1px solid #73404a;
+  outline-offset: 3px;
+  margin-top: 0.5rem;
   padding: 1rem;
 }
 @media all and (max-width: 950px) {
   .menu .menu__soups-container {
-    margin: 0.25rem 0rem 0rem;
+    margin-top: 0rem;
   }
 }
 .menu .menu__soups-dressings {
-  margin-inline: 0.5rem;
-  padding: 0.5rem 1.25rem 1rem;
   height: min-content;
+  margin-top: -1px;
+  padding: 0.5rem 1.5rem 1rem;
+  outline: 1px solid #73404a;
+  outline-offset: 3px;
   font-size: 0.8rem;
   color: #e4c9cf;
   background: #73404a;
-}
-@media all and (max-width: 950px) {
-  .menu .menu__soups-dressings {
-    margin: 0rem;
-  }
 }
 .menu .menu__soups-dressings p:first-of-type {
   position: relative;
@@ -827,13 +829,21 @@ footer .copyright i {
   content: "";
   width: 65%;
   top: 50%;
-  right: 0.5rem;
+  left: 6rem;
   border-bottom: 1px solid #a0626e;
 }
 @media all and (max-width: 950px) {
   .menu .menu__soups-dressings p:first-of-type::after {
     display: none;
   }
+}
+.menu .menu__beverages {
+  margin-block: 2rem 3rem;
+  font-size: 0.9rem;
+  border: 8px solid #73404a;
+  outline: 1px solid #73404a;
+  outline-offset: 3px;
+  padding: 0.75rem 1rem 1rem;
 }
 .menu .menu__pictures {
   display: flex;
@@ -848,17 +858,19 @@ footer .copyright i {
 @media all and (max-width: 950px) {
   .menu .menu__pictures {
     justify-content: center;
-    gap: 2vw;
+    gap: 3vw;
   }
 }
 .menu .menu__pictures img {
   width: 4.5rem;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
 }
-@media all and (max-width: 470px) {
+@media all and (max-width: 950px) {
   .menu .menu__pictures img {
-    width: 30%;
+    width: 20%;
   }
+}
+@media all and (max-width: 470px) {
   .menu .menu__pictures img:last-of-type {
     display: none;
   }

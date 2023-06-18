@@ -38,6 +38,10 @@
     margin-inline: 15vw;
     margin-bottom: 7rem;
 
+    &:last-of-type {
+      margin-bottom: 4rem;
+    }
+
     @include mqMedium {
       margin-inline: 10vw;
       margin-bottom: 4rem;
