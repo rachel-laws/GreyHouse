@@ -1,84 +1,113 @@
 @use '../abstracts' as *;
 
+// Menu Page
+
 .menu {
-  margin-inline: 15vw;
+  // Main Margins
+  margin-top: $menu__main-marginTop;
+  margin-inline: $menu__main-marginInline;
 
   @include mqMedium {
-    margin-inline: 6vw;
+    margin-inline: $menu__main-marginInline--medium;
   }
-
   @include mqNavbar {
-    margin-inline: 0rem;
+    margin-inline: $menu__main-marginInline--small;
   }
 
+  // Page Container
   .menu__container {
     @include flexCenter;
+    gap: $menu__main-marginTop;
     flex-direction: column;
-    margin-top: 3rem;
-    //TODO: Make margins consistent with variables
-    gap: 3rem;
     overflow: hidden;
   }
 
+  // Heading "Menu"
   h2 {
     position: relative;
 
+    // Left Accent Line
     &::before {
       @include pseudoElement;
       border-bottom: 1px solid $white-txt;
-      width: 80%;
       top: 55%;
       left: -100%;
+      width: 80%;
     }
 
+    // Right Accent Line
     &::after {
       @include pseudoElement;
       border-bottom: 1px solid $white-txt;
-      width: 80%;
       top: 55%;
       right: -100%;
+      width: 80%;
     }
   }
 
+  // Menu Grid
   .menu__grid {
+    @include twoCol;
     position: relative;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-
-    width: 100%;
-    padding: 3rem 2rem 0rem;
-
-    color: $dark-txt;
-    outline: 4px solid $dark-txt;
-    outline-offset: -8px;
-    background: url('/assets/paper.png');
-    background-repeat: repeat-y;
 
     @include mqMedium {
-      grid-template-columns: 1fr;
+      grid-template-columns: $one-column;
+      padding-inline: $menu__main-padding--medium;
+    }
+
+    @include mqLarge {
+      max-width: 75vw;
+    }
+
+    width: 100%;
+    padding: $menu__main-padding;
+
+    outline: 4px solid $dark-txt;
+    outline-offset: -8px;
+
+    background: url('/assets/paper.png');
+    background-repeat: repeat-y;
+  }
+
+  // Left Column
+  .col1 {
+    grid-column: 1;
+  }
+
+  // Right Column
+  .col2 {
+    grid-column: 2;
+    padding-left: $menu__rightCol-paddingLeft;
+
+    @include mqMedium {
+      grid-column: 1;
+      padding: 0rem;
     }
   }
 
-  // Title
-
+  // Title "Gray House"
   .menu__title {
     grid-column: span 2;
+
     @include flexCenter;
     flex-direction: column;
     gap: 0.25rem;
     margin-bottom: 1rem;
-    text-transform: uppercase;
-    text-align: center;
 
+    @include headingText;
+
+    // "Gray House"
     h3 {
       position: relative;
+
+      @include headingText;
       font-size: 2.8rem;
-      font-weight: 500;
 
       @include mqMedium {
         font-size: 2rem;
       }
 
+      // Underline
       &::after {
         @include pseudoElement;
         border-bottom: 1px solid $dark-txt;
@@ -88,6 +117,7 @@
       }
     }
 
+    // "Authentic Mediterranean Cuisine"
     p {
       font-size: 0.95rem;
 
@@ -97,14 +127,13 @@
     }
   }
 
-  // Branches
-
+  // Branch SVGs
   .menu__branch {
     position: absolute;
-    width: 10rem;
+    width: $menu__branch-width;
 
     @include mqMedium {
-      width: 8rem;
+      width: $menu__branch-width--medium;
     }
 
     @include mqSmall {
@@ -112,7 +141,8 @@
     }
   }
 
-  .branch1 {
+  // Left Branch Position
+  .branch-left {
     top: 0rem;
     left: -0.25rem;
     transform: rotate(20deg);
@@ -122,7 +152,8 @@
     }
   }
 
-  .branch2 {
+  // Right Branch Position
+  .branch-right {
     top: 0.75rem;
     right: -0.25rem;
     transform: rotate(200deg);
@@ -132,41 +163,35 @@
     }
   }
 
-  // Main content
+  // Menu Content
 
+  // Menu Sections
   .menu__section {
-    display: flex;
-    flex-direction: column;
-    gap: 0.2rem;
-    padding-inline: 0.5rem;
-    padding-block: 1rem 0.5rem;
+    @include flexCol;
+    gap: $menu__section-gap;
+    padding-inline: $menu__section-paddingInline;
+    padding-block: $menu__section-paddingBlock;
   }
 
-  .col1 {
-    grid-column: 1;
+  // Special Section (Soups & Salads, Beverages)
+  .menu__soups,
+  .menu__beverages {
+    margin-top: $menu__specialSection-marginTop;
+    padding: $menu__specialSection-padding;
+    gap: 0rem;
+
+    outline: 1px solid $menu-accent;
+    outline-offset: 0px;
   }
 
-  .col2 {
-    grid-column: 2;
-    padding-left: 1rem;
-
-    @include mqMedium {
-      grid-column: 1;
-      padding: 0rem;
-    }
-  }
-
+  // Section Headings
   .menu__heading {
     position: relative;
-    margin-bottom: 1rem;
-    margin-inline: auto;
-    text-align: center;
     width: 12rem;
+    margin-inline: auto;
+    margin-bottom: $menu__heading-marginBottom;
 
-    font-size: 1.4rem;
-    font-weight: 500;
-    text-transform: uppercase;
-
+    // Underline
     &::after {
       @include pseudoElement;
       width: 100%;
@@ -176,79 +201,50 @@
     }
   }
 
-  .menu__name {
-    font-size: 1.05rem;
-
-    @include mqSmall {
-      font-size: 0.95rem;
-    }
-
-    span {
-      font-size: 0.8rem;
-    }
-  }
-
-  .menu__description {
-    margin-top: -2px;
-    font-size: 0.8rem;
-    color: $faded-txt;
-    line-height: 1.3;
-  }
-
-  .menu__item-sides {
-    display: grid;
-    gap: 0.1rem;
-    margin: auto;
-    grid-template-columns: 1fr 1fr;
-    color: $medium-txt;
-    font-size: 0.9rem;
-
-    .menu__item {
-      width: 10rem;
-    }
-
-    @include mqMedium {
-      gap: 0.1rem 0.5rem;
-    }
-
-    @include mqSmall {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  .menu__soups {
-    gap: 0;
-  }
-
-  .menu__soups-container {
-    border: 8px solid $menu-accent;
-    outline: 1px solid $menu-accent;
-    outline-offset: 3px;
-    margin-top: 0.5rem;
+  // Special Sections
+  .menu__soups-container,
+  .menu__beverages-container {
     padding: 1rem;
+    border: 8px solid $menu-accent;
 
     @include mqMedium {
       margin-top: 0rem;
     }
   }
 
+  // Sides Section
+  .menu__item-sides {
+    @include twoCol;
+    gap: 0.1rem;
+    margin-inline: auto;
+
+    @include mqMedium {
+      gap: $menu__sides-gap--medium;
+    }
+
+    @include mqSmall {
+      grid-template-columns: $one-column;
+    }
+
+    .menu__item {
+      width: 10rem;
+    }
+  }
+
+  // Salad Dressings
   .menu__soups-dressings {
     height: min-content;
     margin-top: -1px;
-    padding: 0.5rem 1.5rem 1rem;
-
-    outline: 1px solid $menu-accent;
-    outline-offset: 3px;
-
-    font-size: 0.8rem;
-    color: $menu-accent-txt;
+    padding: $menu__dressings-padding;
     background: $menu-accent;
 
     p {
+      // "Salad Dressings"
       &:first-of-type {
         position: relative;
         margin-bottom: 0.25rem;
 
+        // Line
         &::after {
           @include pseudoElement;
           width: 65%;
@@ -264,40 +260,22 @@
     }
   }
 
-  .menu__beverages {
-    margin-block: 2rem 3rem;
-    font-size: 0.9rem;
-    border: 8px solid $menu-accent;
-    outline: 1px solid $menu-accent;
-    outline-offset: 3px;
-    padding: 0.75rem 1rem 1rem;
-  }
-
+  // Pictures
   .menu__pictures {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-
-    margin-block: 1.25rem 1rem;
-    padding-block: 0.5rem;
+    justify-content: space-evenly;
+    padding-block: $menu__pictures-paddingBlock;
+    margin-top: 1rem;
 
     width: 100%;
-    border-top: 2px solid #bc8a94;
-    border-bottom: 2px solid #bc8a94;
-
-    @include mqMedium {
-      justify-content: center;
-      gap: 3vw;
-    }
+    border-top: $menu__pictures-border;
+    border-bottom: $menu__pictures-border;
 
     img {
-      width: 4.5rem;
-      box-shadow: 0 0 15px rgb(0 0 0 / 0.15);
+      width: 20%;
+      box-shadow: $menu__pictures-shadow;
 
-      @include mqMedium {
-        width: 20%;
-      }
-
+      // Remove 4th image on smallest screen size
       @include mqSmall {
         &:last-of-type {
           display: none;

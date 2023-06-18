@@ -4,9 +4,14 @@
   align-items: center;
 }
 
-@mixin gridCenter {
+@mixin flexCol {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin twoCol {
   display: grid;
-  justify-content: center;
+  grid-template-columns: 1fr 1fr;
 }
 
 @mixin pseudoElement {
@@ -14,14 +19,20 @@
   content: '';
 }
 
-@mixin mqMedium {
-  @media all and (max-width: 950px) {
+@mixin headingText {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 500;
+}
+
+@mixin mqLarge {
+  @media all and (min-width: 651px) {
     @content;
   }
 }
 
-@mixin mqSmall {
-  @media all and (max-width: 470px) {
+@mixin mqMedium {
+  @media all and (max-width: 950px) {
     @content;
   }
 }
@@ -32,8 +43,8 @@
   }
 }
 
-@mixin mqLarge {
-  @media all and (min-width: 651px) {
+@mixin mqSmall {
+  @media all and (max-width: 470px) {
     @content;
   }
 }

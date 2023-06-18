@@ -1,0 +1,51 @@
+//? Variable Naming System
+//? * = Optional
+//? Parent __ TargetElement - Property *Modifier -- *MediaQuerySize
+
+// Menu Page
+
+// Layout
+$two-column: 1fr 1fr;
+$one-column: 1fr;
+
+// Main Block Margins
+$menu__main-marginTop: 3rem;
+
+// Main Inline Margins
+$menu__main-marginInline: 10vw;
+$menu__main-marginInline--medium: 6vw;
+$menu__main-marginInline--small: 0rem;
+
+// Main Grid Padding
+$menu__main-padding: 3rem 2rem 2rem;
+$menu__main-padding--medium: 5vw;
+
+// Right Column
+$menu__rightCol-paddingLeft: 1rem;
+
+// Branches
+$menu__branch-width: 10rem;
+$menu__branch-width--medium: 8rem;
+
+// Menu Sections
+$menu__section-gap: 0.2rem;
+$menu__section-paddingInline: 0.5rem;
+$menu__section-paddingBlock: 1rem 0.5rem;
+
+// Special Sections (Soups & Salads, Beverages)
+$menu__specialSection-marginTop: 1rem;
+$menu__specialSection-padding: 0.25rem;
+
+// Section Headings
+$menu__heading-marginBottom: 1rem;
+
+// Sides Section
+$menu__sides-gap--medium: 0.1rem 5vw;
+
+// Salad Dressings
+$menu__dressings-padding: 0.5rem 1.5rem 1rem;
+
+// Pictures
+$menu__pictures-paddingBlock: 0.75rem;
+$menu__pictures-border: 2px solid #bc8a94;
+$menu__pictures-shadow: 0 0 15px rgb(0 0 0 / 0.15);

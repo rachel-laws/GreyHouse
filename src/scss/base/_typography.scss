@@ -1,5 +1,7 @@
 @use '../abstracts' as *;
 
+// Global
+
 html {
   font-family: 'Belleza', sans-serif;
 }
@@ -8,7 +10,7 @@ h1,
 h2 {
   font-size: 2.5rem;
   font-weight: normal;
-  margin-top: -8px; /*Fixes top space from font */
+  margin-top: -8px; /* Fixes top space from font */
 
   @include mqNavbar {
     font-size: 2rem;
@@ -31,4 +33,46 @@ body {
   @include mqMedium {
     font-size: 1.05rem !important;
   }
+}
+
+// Menu
+
+.menu__grid {
+  color: $dark-txt;
+}
+
+.menu__heading {
+  @include headingText;
+  font-size: 1.4rem;
+}
+
+.menu__name {
+  font-size: 1.05rem;
+
+  @include mqSmall {
+    font-size: 0.95rem;
+  }
+
+  span {
+    font-size: 0.8rem;
+  }
+}
+
+.menu__description {
+  font-size: 0.8rem;
+  color: $faded-txt;
+  line-height: 1.3;
+}
+
+.menu__beverages,
+.menu__sides {
+  p {
+    font-size: 0.9rem;
+    color: $medium-txt;
+  }
+}
+
+.menu__soups-dressings {
+  font-size: 0.8rem;
+  color: $menu-accent-txt;
 }
