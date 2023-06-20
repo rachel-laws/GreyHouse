@@ -1,1 +1,119 @@
 @use '../abstracts' as *;
+
+.contact {
+  // Header Image
+
+  .img-container {
+    background-image: url('/assets/contact.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+
+    min-height: 45vh;
+    margin-bottom: $home__headerImg-margin;
+    box-shadow: $home__headerImg-shadow;
+
+    @include mqNavbar {
+      min-height: 35vh;
+      background-attachment: scroll;
+      margin-bottom: $home__headerImg-margin--navbar;
+    }
+  }
+
+  .contact__container {
+    @include flexCenter;
+    flex-direction: column;
+    gap: $home__headerImg-margin;
+    margin-bottom: 7rem;
+
+    @include mqNavbar {
+      gap: $home__headerImg-margin--navbar;
+    }
+
+    margin-inline: $menu__main-marginInline;
+
+    @include mqMedium {
+      margin-inline: $menu__main-marginInline--medium;
+    }
+    @include mqNavbar {
+      margin-inline: $menu__main-marginInline--small;
+    }
+  }
+
+  h2 {
+    position: relative;
+
+    // Left Accent Line
+    &::before {
+      @include pseudoElement;
+      border-bottom: 1px solid $white-txt;
+      top: 55%;
+      left: -100%;
+      width: 80%;
+    }
+
+    // Right Accent Line
+    &::after {
+      @include pseudoElement;
+      border-bottom: 1px solid $white-txt;
+      top: 55%;
+      right: -100%;
+      width: 80%;
+    }
+  }
+
+  form {
+    outline: 2px solid black;
+    outline-offset: 4px;
+    box-shadow: $standard-shadow;
+    @include flexCol;
+    align-items: center;
+    width: 50vw;
+    padding: 3rem 5rem;
+    gap: 2rem;
+    background: black;
+
+    input {
+      padding: 0.25rem 0.5rem;
+    }
+
+    input:not([type='submit']) {
+      display: block;
+      margin-top: 0.75rem;
+      height: 1.75rem;
+      width: 33rem;
+      border: none;
+    }
+
+    label {
+      font-size: 1.3rem;
+    }
+
+    textarea {
+      display: block;
+      margin-top: 0.75rem;
+      width: 33rem;
+      border: none;
+      padding: 0.25rem 0.5rem;
+    }
+
+    .form__personal-info {
+      @include flexCenter;
+      gap: 3rem;
+
+      input {
+        width: 15rem;
+      }
+    }
+
+    input[type='submit'] {
+      width: 8rem;
+      height: 3rem;
+      border: none;
+      background: white;
+      font-family: inherit;
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+  }
+}

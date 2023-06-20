@@ -63,6 +63,41 @@
         <li><a href="./contact.html">Contact Us</a></li>
       </ul>
     </nav>
+    <main class="contact">
+      <div class="img-container"></div>
+      <div class="contact__container">
+        <h2 class="contact__heading">Contact Us</h2>
+        <form action="">
+          <div class="form__personal-info">
+            <label for="firstName">
+              Your Name
+              <input type="text" name="firstName" id="firstName" required />
+            </label>
+            <label for="email">
+              Your Email
+              <input type="email" name="email" id="email" required />
+            </label>
+          </div>
+          <label for="subject">
+            Subject
+            <input type="text" name="subject" id="subject" />
+          </label>
+          <label for="contactMessage"
+            >Message
+            <textarea
+              id="contactMessage"
+              name="contactMessage"
+              id=""
+              cols="30"
+              rows="10"
+              resize="none"
+              required>
+            </textarea>
+          </label>
+          <input type="submit" value="Send" />
+        </form>
+      </div>
+    </main>
     <footer
       aria-label="Footer containing location, contact information, and hours">
       <div class="find-us">
