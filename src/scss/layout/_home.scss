@@ -1,50 +1,38 @@
 @use '../abstracts' as *;
 
 .home {
+  // Header Image
+
   .img-container {
-    overflow: hidden;
+    background-image: url('/assets/header.jpg');
+    background-attachment: fixed;
+    background-position: top;
+    background-size: cover;
 
-    @include mqSmall {
-      height: 200%;
+    min-height: 67vh;
+    margin-bottom: $home__headerImg-margin;
+    box-shadow: $home__headerImg-shadow;
+
+    @include mqNavbar {
+      min-height: 35vh;
+      background-attachment: scroll;
+      margin-bottom: $home__headerImg-margin--navbar;
     }
   }
 
-  .home__header-img {
-    margin-bottom: 7rem;
-    box-shadow: 0 0 25px rgb(0 0 0 / 0.4);
-
-    @include mqMedium {
-      margin-bottom: 3rem;
-    }
-
-    @include mqSmall {
-      transform: scale(1.3);
-      margin-bottom: 4rem;
-    }
-  }
-
-  .home__img {
-    max-width: 35vw;
-    object-fit: cover;
-    box-shadow: 0 0 10px rgb(0 0 0 / 0.3);
-
-    @include mqMedium {
-      max-width: 100%;
-      margin-top: 0.5rem;
-    }
-  }
+  // Sections
 
   section {
-    margin-inline: 15vw;
-    margin-bottom: 7rem;
+    margin-inline: $home__main-marginInline;
+    margin-bottom: $home__main-marginBlock;
 
     &:last-of-type {
-      margin-bottom: 4rem;
+      margin-bottom: $home__main-marginBlock--medium;
     }
 
     @include mqMedium {
-      margin-inline: 10vw;
-      margin-bottom: 4rem;
+      margin-inline: $home__main-marginInline--medium;
+      margin-bottom: $home__main-marginBlock--medium;
     }
   }
 
@@ -58,15 +46,21 @@
     }
   }
 
-  #location {
+  // Images
+
+  .home__img {
+    max-width: 36vw;
+    object-fit: cover;
+    box-shadow: $standard-shadow;
+
     @include mqMedium {
-      flex-direction: column;
+      max-width: 100%;
+      margin-top: 0.5rem;
     }
   }
 
   .text {
-    display: flex;
-    flex-direction: column;
+    @include flexCol;
     gap: 1.5rem;
 
     a {
@@ -82,18 +76,25 @@
       font-size: 1rem;
     }
   }
+
+  #location {
+    @include mqMedium {
+      flex-direction: column;
+    }
+  }
 }
+
+// Guest Reviews
 
 .reviews {
   .grid-container {
+    @include twoCol;
     position: relative;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
     justify-content: space-between;
     gap: 1rem calc(1rem + 5vw);
 
     @include mqMedium {
-      grid-template-columns: 1fr;
+      grid-template-columns: $one-column;
     }
   }
 
@@ -106,8 +107,8 @@
   }
 
   .review__row-container {
-    position: relative;
     display: flex;
+    position: relative;
     justify-content: space-between;
 
     padding-block: 0.5rem;
@@ -116,16 +117,6 @@
     @include mqSmall {
       flex-direction: column;
     }
-  }
-
-  .review__name span {
-    padding-inline: 0.25rem;
-    font-size: 1.3rem;
-    color: #3a3a3a;
-  }
-
-  .review__text {
-    padding-block: 0.5rem;
   }
 
   .stars {
@@ -137,12 +128,12 @@
     }
   }
 
+  // Lines
+
   .grid-container::after {
-    content: '';
-    position: absolute;
+    @include pseudoElement;
     top: 0.9rem;
     left: 50%;
-
     width: 1px;
     height: 93%;
     background: #3a3a3a;
@@ -153,6 +144,8 @@
     }
   }
 }
+
+// Center Reservation Btn
 
 .reservation-container {
   @include flexCenter;
