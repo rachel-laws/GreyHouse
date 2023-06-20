@@ -2,6 +2,26 @@
 //? * = Optional
 //? Parent __ TargetElement - Property *Modifier -- *MediaQuerySize
 
+// General
+$standard-shadow: 0 0 10px rgb(0 0 0 / 0.3);
+
+// Home Page
+
+// Main Block Margins
+$home__main-marginBlock: 7rem;
+$home__main-marginBlock--medium: 4rem;
+
+$home__headerImg-marginBottom: 4rem;
+
+// Main Inline Margins
+$home__main-marginInline: 14vw;
+$home__main-marginInline--medium: 10vw;
+
+// Header Image
+$home__headerImg-shadow: 0 0 25px rgb(0 0 0 / 0.4);
+$home__headerImg-margin: 5rem;
+$home__headerImg-margin--navbar: 3rem;
+
 // Menu Page
 
 // Layout
@@ -12,7 +32,7 @@ $one-column: 1fr;
 $menu__main-marginTop: 3rem;
 
 // Main Inline Margins
-$menu__main-marginInline: 10vw;
+$menu__main-marginInline: 12vw;
 $menu__main-marginInline--medium: 6vw;
 $menu__main-marginInline--small: 0rem;
 

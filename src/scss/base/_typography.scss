@@ -35,6 +35,18 @@ body {
   }
 }
 
+// Home
+
+.review__name span {
+  padding-inline: 0.25rem;
+  font-size: 1.3rem;
+  color: #3a3a3a;
+}
+
+.review__text {
+  padding-block: 0.5rem;
+}
+
 // Menu
 
 .menu__grid {
