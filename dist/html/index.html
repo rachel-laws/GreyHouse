@@ -18,30 +18,34 @@
   <body>
     <header>
       <h1 id="home__heading" class="sr-only">Gray House Restaurant</h1>
-      <div class="infobar">
-        <p class="sr-only">Contact Information</p>
-        <a href="#welcome" class="sr-only">Skip link: Skip to navigation bar</a>
-        <a class="email" href="">
-          <span class="sr-only">Email:</span>
-          info@grayhouse.com
-        </a>
-        <p class="phone">
-          <span class="sr-only">Phone Number:</span>
-          1-734-123-4567
-        </p>
-        <div class="socials">
-          <a class="facebook" href="">
-            <span class="sr-only">Facebook</span>
-            <i class="fa-brands fa-facebook-f"></i>
+      <div class="infobar__container">
+        <div class="infobar">
+          <p class="sr-only">Contact Information</p>
+          <a href="#welcome" class="sr-only">
+            Skip link: Skip to navigation bar
           </a>
-          <a class="instagram" href="">
-            <span class="sr-only">Instagram</span>
-            <i class="fa-brands fa-instagram"></i>
+          <a class="email" href="">
+            <span class="sr-only">Email:</span>
+            info@grayhouse.com
           </a>
-          <a class="yelp" href="">
-            <span class="sr-only">Yelp</span>
-            <i class="fa-brands fa-yelp"></i>
-          </a>
+          <p class="phone">
+            <span class="sr-only">Phone Number:</span>
+            1-734-123-4567
+          </p>
+          <div class="socials">
+            <a class="facebook" href="">
+              <span class="sr-only">Facebook</span>
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a class="instagram" href="">
+              <span class="sr-only">Instagram</span>
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a class="yelp" href="">
+              <span class="sr-only">Yelp</span>
+              <i class="fa-brands fa-yelp"></i>
+            </a>
+          </div>
         </div>
       </div>
       <img src="/assets/logo.png" alt="Gray House" class="logo" />
@@ -66,13 +70,16 @@
       </ul>
     </nav>
     <main class="home">
-      <div class="img-container">
-      </div>
+      <div class="img-container" id='headerImg'></div>
       <section id="welcome" class="paragraph">
         <img
           src="/assets/home_1.jpg"
           alt="Dining table with wine and lobster overlooking the sea"
           class="home__img" />
+        <div class="accent__container">
+          <div class="accent__left"></div>
+          <div class="accent__right"></div>
+        </div>
         <div class="text">
           <h2>Welcome to Gray House</h2>
           <a href="#location" class="sr-only">

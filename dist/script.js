@@ -21,3 +21,25 @@ document.querySelectorAll('nav a').forEach(link => {
     link.setAttribute('aria-current', 'page');
   }
 });
+
+// Image Carousel
+
+function changeHeaderImg() {
+  const headerImg = document.querySelector('#headerImg');
+  const headerImgSrc = [
+    'url("/assets/header1.jpg")',
+    'url("/assets/header2.jpg")',
+  ];
+  let currentIndex = 0;
+
+  setInterval(function () {
+    headerImg.style.backgroundImage = headerImgSrc[currentIndex];
+    currentIndex++;
+
+    if (currentIndex >= headerImgSrc.length) {
+      currentIndex = 0;
+    }
+  }, 10000);
+}
+
+changeHeaderImg();

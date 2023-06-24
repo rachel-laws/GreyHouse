@@ -16,7 +16,7 @@
     @include mqNavbar {
       min-height: 35vh;
       background-attachment: scroll;
-      margin-bottom: $home__headerImg-margin--navbar;
+      margin-bottom: $home__headerImg-margin--medium;
     }
   }
 
@@ -27,7 +27,7 @@
     margin-bottom: 7rem;
 
     @include mqNavbar {
-      gap: $home__headerImg-margin--navbar;
+      gap: $home__headerImg-margin--medium;
     }
 
     margin-inline: $menu__main-marginInline;

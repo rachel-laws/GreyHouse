@@ -30,3 +30,41 @@ body {
   white-space: nowrap;
   width: 1px;
 }
+
+// Side Accents
+
+.accent__container {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+}
+
+.accent__left,
+.accent__right {
+  position: fixed;
+  background: linear-gradient(180deg, transparent, $body-bg);
+  background-image: url('/assets/sides.svg');
+  background-repeat: repeat;
+  background-size: 90%;
+  width: 7.5%;
+  height: 100%;
+  opacity: 0.6;
+
+  &::after {
+    @include pseudoElement;
+    inset: 0;
+    background: linear-gradient(to left, transparent 70%, $body-bg);
+  }
+
+  @include mqMedium {
+    display: none;
+  }
+}
+
+.accent__right {
+  transform: rotate(180deg);
+}
+
+.accent__left {
+  right: 0;
+}

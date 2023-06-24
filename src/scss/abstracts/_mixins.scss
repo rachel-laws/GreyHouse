@@ -32,7 +32,7 @@
 }
 
 @mixin mqMedium {
-  @media all and (max-width: 950px) {
+  @media all and (max-width: 1200px) {
     @content;
   }
 }

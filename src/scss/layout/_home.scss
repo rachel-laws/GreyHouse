@@ -4,7 +4,7 @@
   // Header Image
 
   .img-container {
-    background-image: url('/assets/header.jpg');
+    background-image: url('/assets/header1.jpg');
     background-attachment: fixed;
     background-position: top;
     background-size: cover;
@@ -13,11 +13,16 @@
     margin-bottom: $home__headerImg-margin;
     box-shadow: $home__headerImg-shadow;
 
+    @include mqMedium {
+      margin-bottom: $home__headerImg-margin--medium;
+    }
+
     @include mqNavbar {
       min-height: 35vh;
       background-attachment: scroll;
-      margin-bottom: $home__headerImg-margin--navbar;
     }
+
+    transition: 1000ms ease;
   }
 
   // Sections
@@ -34,6 +39,10 @@
       margin-inline: $home__main-marginInline--medium;
       margin-bottom: $home__main-marginBlock--medium;
     }
+
+    @include mqNavbar {
+      margin-inline: $home__main-marginInline--small;
+    }
   }
 
   .paragraph {
@@ -49,8 +58,9 @@
   // Images
 
   .home__img {
-    max-width: 36vw;
+    height: 100%;
     object-fit: cover;
+    max-width: 50%;
     box-shadow: $standard-shadow;
 
     @include mqMedium {
@@ -87,22 +97,30 @@
 // Guest Reviews
 
 .reviews {
+  margin-top: 7rem;
+
+  @include mqMedium {
+    margin-top: 4rem;
+  }
+
   .grid-container {
     @include twoCol;
     position: relative;
     justify-content: space-between;
-    gap: 1rem calc(1rem + 5vw);
+    gap: 2rem calc(2rem + 5vw);
 
     @include mqMedium {
       grid-template-columns: $one-column;
+      gap: 1rem;
     }
   }
 
   h2 {
-    margin-bottom: 1.5rem;
+    margin-bottom: 4rem;
+    text-align: center;
 
     @include mqMedium {
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
     }
   }
 
