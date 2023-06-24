@@ -34,42 +34,68 @@ header {
 // Info
 
 .infobar__container {
-  width: 98vw;
-  display: flex;
+  width: 95vw;
+  display: grid;
   justify-content: flex-end;
   padding-top: 0.5rem;
 
   @include mqNavbar {
     justify-content: center;
+    margin-left: 5px;
   }
 }
 
 .infobar {
   display: flex;
   gap: 0.75rem;
-  margin-right: 0.75rem;
 
   i {
-    margin-right: 0.4rem;
     margin-top: -2px;
     padding: 2px;
     font-size: 0.9rem;
     transition: 125ms ease;
+
+    &:not(:last-of-type) {
+      margin-right: 0.4rem;
+    }
   }
 
   .phone {
     margin-top: -2.5px; /* Fixes bottom gap from font */
   }
+}
 
-  .email:hover {
-    text-decoration: underline;
+.email {
+  position: relative;
+
+  &::before {
+    @include pseudoElement;
+    width: 0%;
+    left: 0;
+
+    bottom: -0.25px;
+    border-bottom: 1px solid white;
+
+    transition: 150ms ease;
   }
 
-  .phone::after,
-  .email::after {
-    content: '|';
-    margin-left: 0.75rem;
+  &:hover::before {
+    width: 88%;
   }
+
+  &:active {
+    color: #c6d5e4;
+  }
+
+  &:active::before {
+    border-color: #c6d5e4;
+  }
+}
+
+.phone::after,
+.email::after {
+  content: '|';
+  margin-left: 0.75rem;
 }
 
 // Socials

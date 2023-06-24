@@ -3,11 +3,14 @@
 .home {
   // Header Image
 
-  .img-container {
+  .home__headerImg-container {
+    position: relative;
+    overflow: hidden;
+
     background-image: url('/assets/header_1.jpg');
-    background-attachment: fixed;
-    background-position: top;
+    background-position: top center;
     background-size: cover;
+    background-attachment: fixed;
 
     min-height: 67vh;
     margin-bottom: $home__headerImg-margin;
@@ -72,14 +75,16 @@
 
   // Images
 
-  .home__img-container {
+  .home__home__headerImg-container {
+    overflow: hidden;
+
     @include mqMedium {
       width: 100%;
     }
   }
 }
 
-.home__img-container--first {
+.home__home__headerImg-container--first {
   @include mqMedium {
     order: 3;
   }
@@ -91,8 +96,14 @@
   object-fit: cover;
 
   @include mqMedium {
-    max-width: 80%;
-    margin-top: 0.5rem;
+    margin-top: 0.75rem;
+  }
+
+  // Image zoom & pan effect
+  @media (prefers-reduced-motion: no-preference) {
+    @include mqXLarge {
+      animation: zoomOut 60s infinite ease-out;
+    }
   }
 }
 

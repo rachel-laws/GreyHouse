@@ -34,7 +34,7 @@ footer {
     @include mqMedium {
       order: 3;
       margin-left: auto;
-      margin-bottom: 2.25rem;
+      margin-bottom: 2rem;
     }
 
     @include mqSmall {
@@ -46,10 +46,6 @@ footer {
   a {
     color: $white-txt;
     text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
   }
 
   .find-us,

@@ -3,13 +3,19 @@
 const nav = document.querySelector('#navList');
 const navLinks = document.querySelector('nav a');
 const mobileNavBtn = document.querySelector('#toggleMobileNav');
+const mobileNavBtnIcon = document.querySelector('#toggleMobileNav i');
+const navLinkNotCurrent = document.querySelector(
+  'a:not([aria-current="page"])'
+);
 
 mobileNavBtn.addEventListener('click', e => {
   if (nav.classList.contains('showMobileNav')) {
     mobileNavBtn.setAttribute('aria-expanded', 'false');
+    mobileNavBtnIcon.classList.replace('bi-x-lg', 'bi-list');
     nav.classList.remove('showMobileNav');
   } else {
     mobileNavBtn.setAttribute('aria-expanded', 'true');
+    mobileNavBtnIcon.classList.replace('bi-list', 'bi-x-lg');
     nav.classList.add('showMobileNav');
   }
 });
@@ -44,3 +50,21 @@ function changeHeaderImg() {
   }, 10000);
 }
 changeHeaderImg();
+
+// Fade In
+let isLoaded = false;
+
+window.onload = function fadeInBody() {
+  if (isLoaded) {
+    return;
+  }
+  isLoaded = true;
+  const body = document.body;
+  body.style.opacity = 0;
+  body.style.animation = 'fadeIn 300ms ease 1';
+
+  setTimeout(function () {
+    body.style.opacity = 1;
+    console.log('hi');
+  }, 300);
+};

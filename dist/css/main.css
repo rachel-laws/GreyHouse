@@ -68,6 +68,33 @@ body {
   right: 0;
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes zoomOut {
+  0% {
+    transform: translate(20px) scale(1.04);
+  }
+  50% {
+    transform: translate(0px) scale(1);
+  }
+  100% {
+    transform: translate(20px) scale(1.04);
+  }
+}
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
 html {
   font-family: "Belleza", sans-serif;
 }
@@ -254,37 +281,59 @@ header a {
 }
 
 .infobar__container {
-  width: 98vw;
-  display: flex;
+  width: 95vw;
+  display: grid;
   justify-content: flex-end;
   padding-top: 0.5rem;
 }
 @media all and (max-width: 650px) {
   .infobar__container {
     justify-content: center;
+    margin-left: 5px;
   }
 }
 
 .infobar {
   display: flex;
   gap: 0.75rem;
-  margin-right: 0.75rem;
 }
 .infobar i {
-  margin-right: 0.4rem;
   margin-top: -2px;
   padding: 2px;
   font-size: 0.9rem;
   transition: 125ms ease;
 }
+.infobar i:not(:last-of-type) {
+  margin-right: 0.4rem;
+}
 .infobar .phone {
   margin-top: -2.5px; /* Fixes bottom gap from font */
 }
-.infobar .email:hover {
-  text-decoration: underline;
+
+.email {
+  position: relative;
 }
-.infobar .phone::after,
-.infobar .email::after {
+.email::before {
+  position: absolute;
+  content: "";
+  width: 0%;
+  left: 0;
+  bottom: -0.25px;
+  border-bottom: 1px solid white;
+  transition: 150ms ease;
+}
+.email:hover::before {
+  width: 88%;
+}
+.email:active {
+  color: #c6d5e4;
+}
+.email:active::before {
+  border-color: #c6d5e4;
+}
+
+.phone::after,
+.email::after {
   content: "|";
   margin-left: 0.75rem;
 }
@@ -311,24 +360,36 @@ nav {
   align-items: center;
   position: sticky;
   top: 0;
-  z-index: 99;
+  z-index: 999;
   padding: 0.75rem;
   border-top: 1px solid rgba(255, 255, 255, 0.0666666667);
   background: #040404;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+  transition: 150ms ease;
 }
 nav .nav__toggle {
   display: none;
   padding: 0rem 0.25rem;
+  cursor: pointer;
   color: #f5f5f5;
   font-size: 1.3rem;
   border: none;
   background: transparent;
-  cursor: pointer;
+  transition: 150ms ease;
+}
+nav .nav__toggle:hover {
+  transform: rotate(-5deg) scale(1.13);
+}
+nav .nav__toggle:active {
+  transform: rotate(-5deg) scale(1);
 }
 @media all and (max-width: 650px) {
   nav .nav__toggle {
-    display: flex;
+    position: absolute;
+    display: block;
+    padding: 0.6rem;
+    left: 0.5rem;
+    top: 0;
   }
 }
 nav a {
@@ -336,10 +397,10 @@ nav a {
   text-decoration: none;
 }
 nav ul {
-  position: relative;
   display: flex;
   text-transform: uppercase;
   font-size: 1.1rem;
+  transition: 200ms ease;
 }
 @media all and (min-width: 651px) {
   nav ul {
@@ -356,9 +417,6 @@ nav ul {
     display: none;
   }
 }
-nav .showMobileNav a {
-  display: block !important;
-}
 @media all and (max-width: 650px) {
   nav .showMobileNav {
     flex-direction: column;
@@ -366,6 +424,12 @@ nav .showMobileNav a {
     justify-content: center;
     align-items: center;
   }
+}
+nav .showMobileNav {
+  animation: slideIn 0.3s forwards;
+}
+nav .showMobileNav a {
+  display: block !important;
 }
 nav li {
   list-style: none;
@@ -429,7 +493,7 @@ footer img {
   footer img {
     order: 3;
     margin-left: auto;
-    margin-bottom: 2.25rem;
+    margin-bottom: 2rem;
   }
 }
 @media all and (max-width: 470px) {
@@ -441,9 +505,6 @@ footer img {
 footer a {
   color: #f5f5f5;
   text-decoration: none;
-}
-footer a:hover {
-  text-decoration: underline;
 }
 footer .find-us,
 footer .hours {
@@ -543,23 +604,25 @@ footer .copyright i {
     scrollbar-width: thin;
   }
 }
-.home .img-container {
+.home .home__headerImg-container {
+  position: relative;
+  overflow: hidden;
   background-image: url("/assets/header_1.jpg");
-  background-attachment: fixed;
-  background-position: top;
+  background-position: top center;
   background-size: cover;
+  background-attachment: fixed;
   min-height: 67vh;
   margin-bottom: 6rem;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
   transition: 1000ms ease;
 }
 @media all and (max-width: 1200px) {
-  .home .img-container {
-    margin-bottom: 5rem;
+  .home .home__headerImg-container {
+    margin-bottom: 3.5rem;
   }
 }
 @media all and (max-width: 650px) {
-  .home .img-container {
+  .home .home__headerImg-container {
     min-height: 35vh;
     margin-bottom: 3rem;
     background-attachment: scroll;
@@ -570,12 +633,12 @@ footer .copyright i {
   margin-bottom: 6rem;
 }
 .home section:last-of-type {
-  margin-bottom: 5rem;
+  margin-bottom: 3.5rem;
 }
 @media all and (max-width: 1200px) {
   .home section {
     margin-inline: 18vw;
-    margin-bottom: 5rem;
+    margin-bottom: 3.5rem;
   }
 }
 @media all and (max-width: 650px) {
@@ -609,14 +672,17 @@ footer .copyright i {
     margin-inline: auto;
   }
 }
+.home .home__home__headerImg-container {
+  overflow: hidden;
+}
 @media all and (max-width: 1200px) {
-  .home .home__img-container {
+  .home .home__home__headerImg-container {
     width: 100%;
   }
 }
 
 @media all and (max-width: 1200px) {
-  .home__img-container--first {
+  .home__home__headerImg-container--first {
     order: 3;
   }
 }
@@ -628,8 +694,12 @@ footer .copyright i {
 }
 @media all and (max-width: 1200px) {
   .home__img {
-    max-width: 80%;
-    margin-top: 0.5rem;
+    margin-top: 0.75rem;
+  }
+}
+@media (prefers-reduced-motion: no-preference) and (min-width: 1201px) {
+  .home__img {
+    animation: zoomOut 60s infinite ease-out;
   }
 }
 
@@ -995,7 +1065,7 @@ footer .copyright i {
   }
 }
 
-.contact .img-container {
+.contact .home__headerImg-container {
   background-image: url("/assets/contact.jpg");
   background-attachment: fixed;
   background-position: center;
@@ -1005,10 +1075,10 @@ footer .copyright i {
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
 }
 @media all and (max-width: 650px) {
-  .contact .img-container {
+  .contact .home__headerImg-container {
     min-height: 35vh;
     background-attachment: scroll;
-    margin-bottom: 5rem;
+    margin-bottom: 3.5rem;
   }
 }
 .contact .contact__container {
@@ -1022,7 +1092,7 @@ footer .copyright i {
 }
 @media all and (max-width: 650px) {
   .contact .contact__container {
-    gap: 5rem;
+    gap: 3.5rem;
   }
 }
 @media all and (max-width: 1200px) {

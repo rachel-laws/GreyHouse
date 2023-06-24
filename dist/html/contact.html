@@ -7,6 +7,9 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,11 +20,10 @@
   </head>
   <body>
     <header>
-      <h1 id="home__heading" class="sr-only">Gray House Restaurant</h1>
       <div class="infobar__container">
         <div class="infobar">
           <p class="sr-only">Contact Information</p>
-          <a href="#welcome" class="sr-only">
+          <a href="#navbar" class="sr-only">
             Skip link: Skip to navigation bar
           </a>
           <a class="email" href="">
@@ -48,16 +50,19 @@
           </div>
         </div>
       </div>
-      <img src="/assets/logo.png" alt="Gray House" class="logo" />
+      <img
+        src="/assets/logo.png"
+        alt="Gray House restaurant logo"
+        class="logo" />
     </header>
     <nav aria-label="Navigation" id="navbar">
       <a href="#welcome" class="sr-only">
         Skip link: Skip to home page content
       </a>
+      <button id="toggleMobileNav" class="nav__toggle">
+        <i class="bi bi-list"></i>
+      </button>
       <ul id="navList">
-        <button id="toggleMobileNav" class="nav__toggle">
-          <i class="fa-solid fa-bars"></i>
-        </button>
         <li><a href="./index.html">Home</a></li>
         <li><a href="./menu.html">Menu</a></li>
         <li>
@@ -70,7 +75,7 @@
       </ul>
     </nav>
     <main class="contact">
-      <div class="img-container"></div>
+      <div class="home__headerImg-container"></div>
       <div class="accent__container">
         <div class="accent__left"></div>
         <div class="accent__right"></div>
@@ -118,7 +123,7 @@
           Karma 1105, Zadar, Croatia 23000
         </p>
         <p class="footer__contact">
-          <a href="">
+          <a href="" class="email">
             <span class="sr-only">Email:</span>
             info@grayhouse.com
           </a>
@@ -127,7 +132,10 @@
           1-734-123-4567
         </p>
       </div>
-      <img class="footer__logo" src="/assets/logo.png" alt="Gray House" />
+      <img
+        class="footer__logo"
+        src="/assets/logo.png"
+        alt="Gray House restaurant logo" />
       <div class="hours">
         <p class="footer__heading">Hours</p>
         <p>Monday - Friday: 11am - 10pm</p>
