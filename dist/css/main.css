@@ -40,8 +40,8 @@ body {
   position: fixed;
   background: linear-gradient(180deg, transparent, #141414);
   background-image: url("/assets/sides.svg");
-  background-repeat: repeat;
-  background-size: 90%;
+  background-repeat: repeat-y;
+  background-size: 100%;
   width: 7.5%;
   height: 100%;
   opacity: 0.6;
@@ -81,13 +81,13 @@ h2 {
 @media all and (max-width: 650px) {
   h1,
   h2 {
-    font-size: 2rem;
+    font-size: 2.3rem;
   }
 }
 
 body {
   color: #f5f5f5;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
 }
 body p {
   line-height: 1.5;
@@ -95,11 +95,6 @@ body p {
 body a {
   color: #91a0d2;
   transition: 150ms;
-}
-@media all and (max-width: 1200px) {
-  body {
-    font-size: 1.05rem !important;
-  }
 }
 
 .infobar {
@@ -171,11 +166,11 @@ body a {
 }
 
 #menu__reservation-btn {
-  margin-block: 2rem 5rem;
+  margin-block: 2rem 6rem;
 }
 @media all and (max-width: 1200px) {
   #menu__reservation-btn {
-    margin-block: 1rem 4rem;
+    margin-block: 1rem 5rem;
   }
 }
 
@@ -188,7 +183,7 @@ body a {
   outline: 4px solid #141414;
   border: 4px solid #5e353d;
   outline-offset: -0.5rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.35);
   background: url("/assets/vines.svg");
   background-size: contain;
   background-position: center;
@@ -549,7 +544,7 @@ footer .copyright i {
   }
 }
 .home .img-container {
-  background-image: url("/assets/header1.jpg");
+  background-image: url("/assets/header_1.jpg");
   background-attachment: fixed;
   background-position: top;
   background-size: cover;
@@ -560,12 +555,13 @@ footer .copyright i {
 }
 @media all and (max-width: 1200px) {
   .home .img-container {
-    margin-bottom: 2.5rem;
+    margin-bottom: 5rem;
   }
 }
 @media all and (max-width: 650px) {
   .home .img-container {
     min-height: 35vh;
+    margin-bottom: 3rem;
     background-attachment: scroll;
   }
 }
@@ -585,49 +581,85 @@ footer .copyright i {
 @media all and (max-width: 650px) {
   .home section {
     margin-inline: 8vw;
+    margin-bottom: 3rem;
   }
 }
 .home .paragraph {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 3rem;
+}
+.home .paragraph h2 {
+  position: relative;
+}
+.home .paragraph h2::after {
+  position: absolute;
+  content: "";
 }
 @media all and (max-width: 1200px) {
   .home .paragraph {
-    flex-direction: column-reverse;
-    gap: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
   }
 }
-.home .home__img {
-  height: 100%;
-  object-fit: cover;
-  max-width: 50%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+@media all and (min-width: 3000px) {
+  .home .paragraph {
+    max-width: 1600px;
+    margin-inline: auto;
+  }
 }
 @media all and (max-width: 1200px) {
-  .home .home__img {
-    max-width: 100%;
+  .home .home__img-container {
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 1200px) {
+  .home__img-container--first {
+    order: 3;
+  }
+}
+
+.home__img {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.35);
+  height: 100%;
+  object-fit: cover;
+}
+@media all and (max-width: 1200px) {
+  .home__img {
+    max-width: 80%;
     margin-top: 0.5rem;
   }
 }
-.home .text {
+
+.home__text {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.5rem 0rem;
 }
-.home .text a {
+@media all and (min-width: 1201px) {
+  .home__text {
+    background-color: #1d1d1d;
+    padding: 3rem 3vw;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.35);
+    border: 2px solid #73404a;
+    outline: 1px solid #73404a;
+    outline-offset: -10px;
+  }
+}
+.home__text a {
   display: block;
   width: 7rem;
 }
-.home .text a:hover {
+.home__text a:hover {
   color: #a6b4e3;
 }
-.home .text i {
+.home__text i {
   font-size: 1rem;
 }
 @media all and (max-width: 1200px) {
-  .home #location {
+  .home__text #location {
     flex-direction: column;
   }
 }
@@ -638,6 +670,21 @@ footer .copyright i {
 @media all and (max-width: 1200px) {
   .reviews {
     margin-top: 4rem;
+  }
+}
+@media all and (min-width: 3000px) {
+  .reviews {
+    max-width: 1600px;
+    margin-inline: auto !important;
+  }
+}
+.reviews h2 {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+@media all and (max-width: 1200px) {
+  .reviews h2 {
+    margin-bottom: 2rem;
   }
 }
 .reviews .grid-container {
@@ -651,15 +698,6 @@ footer .copyright i {
   .reviews .grid-container {
     grid-template-columns: 1fr;
     gap: 1rem;
-  }
-}
-.reviews h2 {
-  margin-bottom: 4rem;
-  text-align: center;
-}
-@media all and (max-width: 1200px) {
-  .reviews h2 {
-    margin-bottom: 2rem;
   }
 }
 .reviews .review__row-container {
@@ -706,7 +744,7 @@ footer .copyright i {
 }
 
 .menu {
-  margin-top: 3rem;
+  margin-top: 4rem;
   margin-inline: 12vw;
 }
 @media all and (max-width: 1200px) {
@@ -723,7 +761,7 @@ footer .copyright i {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
+  gap: 4rem;
   flex-direction: column;
   overflow: hidden;
 }
@@ -750,6 +788,7 @@ footer .copyright i {
   display: grid;
   grid-template-columns: 1fr 1fr;
   position: relative;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.35);
   width: 100%;
   padding: 3rem 2rem 2rem;
   outline: 4px solid #0b0b0b;
@@ -765,7 +804,7 @@ footer .copyright i {
 }
 @media all and (min-width: 651px) {
   .menu .menu__grid {
-    max-width: 75vw;
+    max-width: 1000px;
   }
 }
 .menu .col1 {
@@ -969,7 +1008,7 @@ footer .copyright i {
   .contact .img-container {
     min-height: 35vh;
     background-attachment: scroll;
-    margin-bottom: 2.5rem;
+    margin-bottom: 5rem;
   }
 }
 .contact .contact__container {
@@ -983,7 +1022,7 @@ footer .copyright i {
 }
 @media all and (max-width: 650px) {
   .contact .contact__container {
-    gap: 2.5rem;
+    gap: 5rem;
   }
 }
 @media all and (max-width: 1200px) {
@@ -1018,7 +1057,7 @@ footer .copyright i {
 .contact form {
   outline: 2px solid black;
   outline-offset: 4px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.35);
   display: flex;
   flex-direction: column;
   align-items: center;

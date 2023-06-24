@@ -3,15 +3,18 @@
 //? Parent __ TargetElement - Property *Modifier -- *MediaQuerySize
 
 // General
-$standard-shadow: 0 0 10px rgb(0 0 0 / 0.4);
+$standard-shadow: 0 0 15px rgb(0 0 0 / 0.35);
+
+// Layout
+$two-column: 1fr 1fr;
+$one-column: 1fr;
 
 // Home Page
 
 // Main Block Margins
 $home__main-marginBlock: 6rem;
 $home__main-marginBlock--medium: 5rem;
-
-$home__headerImg-marginBottom: 4rem;
+$home__main-marginBlock--small: 3rem;
 
 // Main Inline Margins
 $home__main-marginInline: 14vw;
@@ -20,17 +23,15 @@ $home__main-marginInline--small: 8vw;
 
 // Header Image
 $home__headerImg-shadow: 0 0 25px rgb(0 0 0 / 0.4);
+
 $home__headerImg-margin: 6rem;
-$home__headerImg-margin--medium: 2.5rem;
+$home__headerImg-margin--medium: 5rem;
+$home__headerImg-margin--small: 3rem;
 
 // Menu Page
 
-// Layout
-$two-column: 1fr 1fr;
-$one-column: 1fr;
-
 // Main Block Margins
-$menu__main-marginTop: 3rem;
+$menu__main-marginTop: 4rem;
 
 // Main Inline Margins
 $menu__main-marginInline: 12vw;

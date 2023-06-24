@@ -70,17 +70,19 @@
       </ul>
     </nav>
     <main class="home">
-      <div class="img-container" id='headerImg'></div>
+      <div class="img-container" id="headerImg"></div>
       <section id="welcome" class="paragraph">
-        <img
-          src="/assets/home_1.jpg"
-          alt="Dining table with wine and lobster overlooking the sea"
-          class="home__img" />
+        <div class="home__img-container home__img-container--first">
+          <img
+            src="/assets/home_1.jpg"
+            alt="Dining table with wine and lobster overlooking the sea"
+            class="home__img" />
+        </div>
         <div class="accent__container">
           <div class="accent__left"></div>
           <div class="accent__right"></div>
         </div>
-        <div class="text">
+        <div class="home__text">
           <h2>Welcome to Gray House</h2>
           <a href="#location" class="sr-only">
             Skip link: Skip to location section
@@ -103,7 +105,7 @@
         </div>
       </section>
       <section id="location" class="paragraph">
-        <div class="text">
+        <div class="home__text">
           <h2>Our Location</h2>
           <a href="#reviews" class="sr-only">
             Skip link: Skip to guest reviews section
@@ -122,13 +124,21 @@
           </p>
           <p>
             <i class="fa-solid fa-location-dot"></i> Karma 1105, Zadar, Croatia
-            23000 <a href="">Get Directions</a>
+            23000
+            <a
+              href="https://www.google.com/maps"
+              target="_blank"
+              title="Google Maps">
+              Get Directions
+            </a>
           </p>
         </div>
-        <img
-          src="/assets/home_2.jpg"
-          alt="Dining table with wine and lobster overlooking the sea"
-          class="home__img" />
+        <div class="home__img-container">
+          <img
+            src="/assets/home_2.jpg"
+            alt="Dining table with wine and lobster overlooking the sea"
+            class="home__img" />
+        </div>
       </section>
       <section id="reviews" class="reviews">
         <h2>Guest Reviews</h2>

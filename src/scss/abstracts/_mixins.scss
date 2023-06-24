@@ -25,6 +25,18 @@
   font-weight: 500;
 }
 
+@mixin mqXXLarge {
+  @media all and (min-width: 3000px) {
+    @content;
+  }
+}
+
+@mixin mqXLarge {
+  @media all and (min-width: 1201px) {
+    @content;
+  }
+}
+
 @mixin mqLarge {
   @media all and (min-width: 651px) {
     @content;

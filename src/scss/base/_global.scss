@@ -44,8 +44,8 @@ body {
   position: fixed;
   background: linear-gradient(180deg, transparent, $body-bg);
   background-image: url('/assets/sides.svg');
-  background-repeat: repeat;
-  background-size: 90%;
+  background-repeat: repeat-y;
+  background-size: 100%;
   width: 7.5%;
   height: 100%;
   opacity: 0.6;

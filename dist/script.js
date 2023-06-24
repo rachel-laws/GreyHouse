@@ -14,7 +14,7 @@ mobileNavBtn.addEventListener('click', e => {
   }
 });
 
-// Active Page
+// Active Page Underline
 
 document.querySelectorAll('nav a').forEach(link => {
   if (link.href === window.location.href) {
@@ -27,9 +27,11 @@ document.querySelectorAll('nav a').forEach(link => {
 function changeHeaderImg() {
   const headerImg = document.querySelector('#headerImg');
   const headerImgSrc = [
-    'url("/assets/header1.jpg")',
-    'url("/assets/header2.jpg")',
+    'url("/assets/header_1.jpg")',
+    'url("/assets/header_2.jpg")',
+    'url("/assets/header_3.jpg")',
   ];
+
   let currentIndex = 0;
 
   setInterval(function () {
@@ -41,5 +43,4 @@ function changeHeaderImg() {
     }
   }, 10000);
 }
-
 changeHeaderImg();

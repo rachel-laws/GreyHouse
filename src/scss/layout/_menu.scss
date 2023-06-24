@@ -49,6 +49,7 @@
   .menu__grid {
     @include twoCol;
     position: relative;
+    box-shadow: $standard-shadow;
 
     @include mqMedium {
       grid-template-columns: $one-column;
@@ -56,7 +57,7 @@
     }
 
     @include mqLarge {
-      max-width: 75vw;
+      max-width: 1000px;
     }
 
     width: 100%;
