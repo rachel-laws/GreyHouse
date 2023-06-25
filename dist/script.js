@@ -32,10 +32,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Image Carousel
 
+function executeOnLargeScreen(callback) {
+  if (window.innerWidth > 650) {
+    callback();
+  }
+}
+
 function changeHeaderImg() {
-  if (window.innerWidth < 651) {
+  if (window.innerWidth <= 650) {
     return;
-  } else {
+  } else if (window.innerWidth > 650) {
     const headerImg = document.querySelector('#headerImg');
     const headerImgSrc = [
       'url("/assets/header_1.jpg")',
@@ -55,7 +61,8 @@ function changeHeaderImg() {
     }, 10000);
   }
 }
-changeHeaderImg();
+
+executeOnLargeScreen(changeHeaderImg);
 
 // Fade In
 // let isLoaded = false;
