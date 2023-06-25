@@ -422,9 +422,6 @@ nav ul {
     align-items: center;
   }
 }
-nav .showMobileNav {
-  animation: slideIn 0.3s forwards;
-}
 nav .showMobileNav a {
   display: block !important;
 }
@@ -602,13 +599,11 @@ footer .copyright i {
   }
 }
 .home .home__headerImg-container {
-  position: relative;
-  overflow: hidden;
   background-image: url("/assets/header_1.jpg");
   background-position: top center;
   background-size: cover;
   background-attachment: fixed;
-  min-height: 67vh;
+  height: 67vh;
   margin-bottom: 6rem;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
   transition: 1000ms ease;
@@ -620,7 +615,7 @@ footer .copyright i {
 }
 @media all and (max-width: 650px) {
   .home .home__headerImg-container {
-    min-height: 35vh;
+    height: 35vh;
     margin-bottom: 3rem;
     background-attachment: scroll;
   }

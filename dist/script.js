@@ -46,7 +46,7 @@ function changeHeaderImg() {
     const headerImgSrc = [
       'url("/assets/header_1.jpg")',
       'url("/assets/header_2.jpg")',
-      'url("/assets/header_3.jpg")',
+      // 'url("/assets/header_3.jpg")',
     ];
 
     let currentIndex = 0;
