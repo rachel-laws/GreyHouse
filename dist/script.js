@@ -32,6 +32,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Image Carousel
 
+function preloadImages(imageSources) {
+  for (const source of imageSources) {
+    const img = new Image();
+    img.src = source;
+  }
+}
+
+const headerImageSources = ['/assets/header_1.jpg', '/assets/header_2.jpg'];
+
+preloadImages(headerImageSources);
+
 function executeOnLargeScreen(callback) {
   if (window.innerWidth > 650) {
     callback();
@@ -39,45 +50,39 @@ function executeOnLargeScreen(callback) {
 }
 
 function changeHeaderImg() {
-  if (window.innerWidth <= 650) {
-    return;
-  } else if (window.innerWidth > 650) {
-    const headerImg = document.querySelector('#headerImg');
+  const headerImg = document.querySelector('.home__headerImg-container');
+  if (headerImg) {
     const headerImgSrc = [
       'url("/assets/header_1.jpg")',
       'url("/assets/header_2.jpg")',
-      // 'url("/assets/header_3.jpg")',
     ];
 
     let currentIndex = 0;
 
     setInterval(function () {
       headerImg.style.backgroundImage = headerImgSrc[currentIndex];
-      currentIndex++;
-
-      if (currentIndex >= headerImgSrc.length) {
-        currentIndex = 0;
-      }
-    }, 10000);
+      currentIndex = (currentIndex + 1) % headerImgSrc.length;
+    }, 12000);
   }
 }
 
 executeOnLargeScreen(changeHeaderImg);
 
 // Fade In
-// let isLoaded = false;
 
-// window.onload = function fadeInBody() {
-//   if (isLoaded) {
-//     return;
-//   }
-//   isLoaded = true;
-//   const body = document.body;
-//   body.style.opacity = 0;
-//   body.style.animation = 'fadeIn 300ms ease 1';
+let isLoaded = false;
 
-//   setTimeout(function () {
-//     body.style.opacity = 1;
-//     console.log('hi');
-//   }, 300);
-// };
+window.onload = function fadeInBody() {
+  if (isLoaded) {
+    return;
+  }
+  isLoaded = true;
+  const body = document.body;
+  body.style.opacity = 0;
+  body.style.animation = 'fadeIn 300ms ease 1';
+
+  setTimeout(function () {
+    body.style.opacity = 1;
+    console.log('hi');
+  }, 300);
+};

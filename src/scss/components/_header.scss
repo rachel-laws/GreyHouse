@@ -62,6 +62,10 @@ header {
 
   .phone {
     margin-top: -2.5px; /* Fixes bottom gap from font */
+
+    @include mqSmall {
+      display: none;
+    }
   }
 
   .email {

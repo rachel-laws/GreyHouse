@@ -31,7 +31,9 @@ $home__headerImg-margin--small: 3rem;
 // Menu Page
 
 // Main Block Margins
-$menu__main-marginTop: 4rem;
+$menu__main-margin: 4rem;
+$menu__main-margin--medium: 3rem;
+
 
 // Main Inline Margins
 $menu__main-marginInline: 12vw;
@@ -71,3 +73,10 @@ $menu__dressings-padding: 0.5rem 1.5rem 1rem;
 $menu__pictures-paddingBlock: 0.75rem;
 $menu__pictures-border: 2px solid #bc8a94;
 $menu__pictures-shadow: 0 0 15px rgb(0 0 0 / 0.15);
+
+// Contact
+
+// Main Block Margins
+
+$contact__headerImg-margin: 4rem;
+$contact__headerImg-margin--medium: 3rem;

@@ -4,7 +4,7 @@ nav {
   @include flexCenter;
   position: sticky;
   top: 0;
-  z-index: 999;
+  z-index: 9999;
 
   padding: 0.75rem;
   border-top: 1px solid #ffffff11;
@@ -14,7 +14,6 @@ nav {
   .nav__toggle {
     display: none;
     padding: 0rem 0.25rem;
-    cursor: pointer;
 
     color: $white-txt;
     font-size: 1.3rem;
@@ -71,9 +70,9 @@ nav {
   .showMobileNav {
     @include mqNavbar {
       flex-direction: column;
-      gap: 1rem;
       justify-content: center;
       align-items: center;
+      gap: 1rem;
     }
   }
 

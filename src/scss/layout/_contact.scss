@@ -3,45 +3,37 @@
 .contact {
   // Header Image
 
-  .home__headerImg-container {
+  .contact__headerImg-container {
     background-image: url('/assets/contact.jpg');
     background-attachment: fixed;
-    background-position: center;
+    background-position: top center;
     background-size: cover;
 
-    min-height: 45vh;
-    margin-bottom: $home__headerImg-margin;
+    min-height: 25vh;
     box-shadow: $home__headerImg-shadow;
 
     @include mqNavbar {
-      min-height: 35vh;
       background-attachment: scroll;
-      margin-bottom: $home__headerImg-margin--medium;
     }
   }
 
   .contact__container {
     @include flexCenter;
     flex-direction: column;
-    gap: $home__headerImg-margin;
     margin-bottom: 7rem;
 
     @include mqNavbar {
-      gap: $home__headerImg-margin--medium;
-    }
-
-    margin-inline: $menu__main-marginInline;
-
-    @include mqMedium {
-      margin-inline: $menu__main-marginInline--medium;
-    }
-    @include mqNavbar {
-      margin-inline: $menu__main-marginInline--small;
+      margin-bottom: 5rem;
     }
   }
 
   h2 {
     position: relative;
+    margin-block: $contact__headerImg-margin;
+
+    @include mqMedium {
+      margin-block: $contact__headerImg-margin--medium;
+    }
 
     // Left Accent Line
     &::before {
@@ -50,6 +42,11 @@
       top: 55%;
       left: -100%;
       width: 80%;
+
+      @include mqNavbar {
+        width: 50%;
+        left: -65%;
+      }
     }
 
     // Right Accent Line
@@ -59,61 +56,88 @@
       top: 55%;
       right: -100%;
       width: 80%;
+
+      @include mqNavbar {
+        width: 50%;
+        right: -65%;
+      }
     }
   }
 
   form {
-    outline: 2px solid black;
-    outline-offset: 4px;
-    box-shadow: $standard-shadow;
     @include flexCol;
     align-items: center;
     width: 50vw;
-    padding: 3rem 5rem;
     gap: 2rem;
-    background: black;
+    padding: 3rem 8vw;
 
-    input {
-      padding: 0.25rem 0.5rem;
+    @include mqMedium {
+      width: 65vw;
+    }
+
+    @include mqNavbar {
+      width: 90vw;
+    }
+
+    background: $card-bg;
+    border: 2px solid $menu-accent;
+    outline: 1px solid $menu-accent;
+    outline-offset: -10px;
+    box-shadow: $standard-shadow;
+
+    label {
+      display: block;
+      font-size: 1.3rem;
+      width: 100%;
+    }
+
+    input,
+    textarea {
+      font-size: 1.05rem;
+      box-shadow: 2px 2px 10px black;
+      border: none;
+      font-family: inherit;
+      width: 100%;
     }
 
     input:not([type='submit']) {
       display: block;
+      padding: 0.5rem 0.75rem;
       margin-top: 0.75rem;
-      height: 1.75rem;
-      width: 33rem;
       border: none;
     }
 
-    label {
-      font-size: 1.3rem;
+    .form__personal-info {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      gap: 2rem;
     }
 
     textarea {
       display: block;
+      resize: none;
+      font-family: inherit;
       margin-top: 0.75rem;
-      width: 33rem;
       border: none;
-      padding: 0.25rem 0.5rem;
-    }
-
-    .form__personal-info {
-      @include flexCenter;
-      gap: 3rem;
-
-      input {
-        width: 15rem;
-      }
+      padding: 0.6rem 0.75rem;
     }
 
     input[type='submit'] {
+      margin-top: 0.5rem;
       width: 8rem;
       height: 3rem;
-      border: none;
-      background: white;
-      font-family: inherit;
+
       font-size: 1.5rem;
-      font-weight: 600;
+      font-weight: 500;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+
+      outline-offset: 4px;
+      outline: 1px solid $menu-accent;
+      border: 2px solid $menu-accent;
+      background: $dark-txt;
+      text-shadow: -1px 1px 8px rgba(127 127 127 / 0.8);
     }
   }
 }

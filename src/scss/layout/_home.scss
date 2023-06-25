@@ -4,7 +4,6 @@
   // Header Image
 
   .home__headerImg-container {
-    background-image: url('/assets/header_1.jpg');
     background-position: top center;
     background-size: cover;
     background-attachment: fixed;
@@ -23,7 +22,15 @@
       background-attachment: scroll;
     }
 
-    transition: 1000ms ease;
+    transition: background-image 2000ms ease;
+  }
+
+  .home__headerImg-container.headerImg-1 {
+    background-image: url('/assets/header_1.jpg');
+  }
+
+  .home__headerImg-container.headerImg-2 {
+    background-image: url('/assets/header_2.jpg');
   }
 
   // Sections
@@ -81,7 +88,7 @@
   }
 }
 
-.home__home__headerImg-container--first {
+.home__headerImg-container--first {
   @include mqMedium {
     order: 3;
   }
@@ -140,7 +147,7 @@
 // Guest Reviews
 
 .reviews {
-  margin-top: 7rem;
+  margin-top: 6rem;
 
   @include mqMedium {
     margin-top: 4rem;

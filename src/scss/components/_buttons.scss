@@ -1,7 +1,14 @@
 @use '../abstracts' as *;
 
+button,
+input[type='submit'] {
+  cursor: pointer;
+  font-family: inherit;
+  color: $white-txt;
+}
+
 #home__reservation-btn {
-  margin-block: 8rem 9rem;
+  margin-block: 6rem 7rem;
 
   @include mqMedium {
     margin-block: 3rem 6rem;

@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="/dist/css/main.css" />
     <title>Gray House Restaurant</title>
   </head>
+
   <body>
     <header>
       <div class="infobar__container">
@@ -66,16 +67,26 @@
         <li><a href="https://lawsonwebdevelopment.com/">Home</a></li>
         <li><a href="/dist/html/menu.html">Menu</a></li>
         <li>
-          <a target="_blank" href="https://www.grubhub.com/">Order Online</a>
+          <a
+            target="_blank"
+            href="https://www.grubhub.com/"
+            title="grubhub.com">
+            Order Online
+          </a>
         </li>
         <li>
-          <a target="_blank" href="https://www.opentable.com/">Reservations</a>
+          <a
+            target="_blank"
+            href="https://www.opentable.com/"
+            title="opentable.com">
+            Reservations
+          </a>
         </li>
         <li><a href="/dist/html/contact.html">Contact Us</a></li>
       </ul>
     </nav>
     <main class="contact">
-      <div class="home__headerImg-container"></div>
+      <div class="contact__headerImg-container"></div>
       <div class="accent__container">
         <div class="accent__left"></div>
         <div class="accent__right"></div>
@@ -86,28 +97,44 @@
           <div class="form__personal-info">
             <label for="firstName">
               Your Name
-              <input type="text" name="firstName" id="firstName" required />
+              <input
+                type="text"
+                name="firstName"
+                id="firstName"
+                placeholder="ex. John Smith"
+                maxlength="25"
+                required />
             </label>
             <label for="email">
               Your Email
-              <input type="email" name="email" id="email" required />
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="ex. johnsmith@gmail.com"
+                maxlength="25"
+                required />
             </label>
           </div>
           <label for="subject">
             Subject
-            <input type="text" name="subject" id="subject" />
+            <input
+              type="text"
+              name="subject"
+              id="subject"
+              placeholder="Describe your message"
+              maxlength="40" />
           </label>
           <label for="contactMessage"
             >Message
             <textarea
               id="contactMessage"
               name="contactMessage"
-              id=""
               cols="30"
               rows="10"
-              resize="none"
-              required>
-            </textarea>
+              maxlength="300"
+              placeholder="Write your message here"
+              required></textarea>
           </label>
           <input type="submit" value="Send" />
         </form>
