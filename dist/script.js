@@ -22,10 +22,12 @@ mobileNavBtn.addEventListener('click', e => {
 
 // Active Page Underline
 
-document.querySelectorAll('nav a').forEach(link => {
-  if (link.href === window.location.href) {
-    link.setAttribute('aria-current', 'page');
-  }
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('nav a').forEach(link => {
+    if (link.href === window.location.href) {
+      link.setAttribute('aria-current', 'page');
+    }
+  });
 });
 
 // Image Carousel
