@@ -251,7 +251,6 @@ body a {
 }
 
 header {
-  position: relative;
   background: linear-gradient(90deg, #111111, #000 35%, #000 65%, #111111);
   display: grid;
   justify-content: center;
@@ -311,11 +310,10 @@ header a {
 .infobar .phone {
   margin-top: -2.5px; /* Fixes bottom gap from font */
 }
-
-.email {
+.infobar .email {
   position: relative;
 }
-.email::before {
+.infobar .email::before {
   position: absolute;
   content: "";
   width: 0%;
@@ -324,18 +322,17 @@ header a {
   border-bottom: 1px solid white;
   transition: 150ms ease;
 }
-.email:hover::before {
+.infobar .email:hover::before {
   width: 88%;
 }
-.email:active {
+.infobar .email:active {
   color: #c6d5e4;
 }
-.email:active::before {
+.infobar .email:active::before {
   border-color: #c6d5e4;
 }
-
-.phone::after,
-.email::after {
+.infobar .phone::after,
+.infobar .email::after {
   content: "|";
   margin-left: 0.75rem;
 }
@@ -424,6 +421,9 @@ nav ul {
     justify-content: center;
     align-items: center;
   }
+}
+nav .showMobileNav {
+  animation: slideIn 0.3s forwards;
 }
 nav .showMobileNav a {
   display: block !important;

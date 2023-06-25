@@ -3,7 +3,6 @@
 // Header
 
 header {
-  position: relative;
   background: $header-bg;
   display: grid;
   justify-content: center;
@@ -65,39 +64,39 @@ header {
   .phone {
     margin-top: -2.5px; /* Fixes bottom gap from font */
   }
-}
 
-.email {
-  position: relative;
+  .email {
+    position: relative;
 
-  &::before {
-    @include pseudoElement;
-    width: 0%;
-    left: 0;
+    &::before {
+      @include pseudoElement;
+      width: 0%;
+      left: 0;
 
-    bottom: -0.25px;
-    border-bottom: 1px solid white;
+      bottom: -0.25px;
+      border-bottom: 1px solid white;
 
-    transition: 150ms ease;
+      transition: 150ms ease;
+    }
+
+    &:hover::before {
+      width: 88%;
+    }
+
+    &:active {
+      color: #c6d5e4;
+    }
+
+    &:active::before {
+      border-color: #c6d5e4;
+    }
   }
 
-  &:hover::before {
-    width: 88%;
+  .phone::after,
+  .email::after {
+    content: '|';
+    margin-left: 0.75rem;
   }
-
-  &:active {
-    color: #c6d5e4;
-  }
-
-  &:active::before {
-    border-color: #c6d5e4;
-  }
-}
-
-.phone::after,
-.email::after {
-  content: '|';
-  margin-left: 0.75rem;
 }
 
 // Socials
