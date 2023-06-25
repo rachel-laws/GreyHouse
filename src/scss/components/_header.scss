@@ -6,7 +6,6 @@ header {
   background: $header-bg;
   display: grid;
   justify-content: center;
-  z-index: 1000;
 
   @include mqNavbar {
     background: $mobile-header-bg;
