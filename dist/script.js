@@ -33,23 +33,27 @@ document.addEventListener('DOMContentLoaded', function () {
 // Image Carousel
 
 function changeHeaderImg() {
-  const headerImg = document.querySelector('#headerImg');
-  const headerImgSrc = [
-    'url("/assets/header_1.jpg")',
-    'url("/assets/header_2.jpg")',
-    'url("/assets/header_3.jpg")',
-  ];
+  if (window.innerWidth < 651) {
+    return;
+  } else {
+    const headerImg = document.querySelector('#headerImg');
+    const headerImgSrc = [
+      'url("/assets/header_1.jpg")',
+      'url("/assets/header_2.jpg")',
+      'url("/assets/header_3.jpg")',
+    ];
 
-  let currentIndex = 0;
+    let currentIndex = 0;
 
-  setInterval(function () {
-    headerImg.style.backgroundImage = headerImgSrc[currentIndex];
-    currentIndex++;
+    setInterval(function () {
+      headerImg.style.backgroundImage = headerImgSrc[currentIndex];
+      currentIndex++;
 
-    if (currentIndex >= headerImgSrc.length) {
-      currentIndex = 0;
-    }
-  }, 10000);
+      if (currentIndex >= headerImgSrc.length) {
+        currentIndex = 0;
+      }
+    }, 10000);
+  }
 }
 changeHeaderImg();
 

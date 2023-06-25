@@ -16,7 +16,7 @@ img {
 }
 
 body {
-  background: red;
+  background: #141414;
 }
 
 .sr-only {
@@ -424,9 +424,6 @@ nav ul {
     justify-content: center;
     align-items: center;
   }
-}
-nav .showMobileNav {
-  animation: slideIn 0.3s forwards;
 }
 nav .showMobileNav a {
   display: block !important;
