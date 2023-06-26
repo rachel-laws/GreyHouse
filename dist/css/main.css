@@ -303,7 +303,7 @@ input[type=submit] {
 }
 @media all and (max-width: 1200px) {
   #home__reservation-btn {
-    margin-block: 3rem 6rem;
+    margin-block: -1rem 3.25rem;
   }
 }
 
@@ -989,13 +989,12 @@ footer .copyright i {
   display: grid;
   grid-template-columns: 1fr 1fr;
   position: relative;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.35);
   width: 100%;
   padding: 3rem 2rem 2rem;
   outline: 4px solid #0b0b0b;
   outline-offset: -8px;
-  background: url("/assets/paper.png");
-  background-repeat: repeat-y;
+  background: #f8efe4;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.35);
 }
 @media all and (max-width: 1200px) {
   .menu .menu__grid {

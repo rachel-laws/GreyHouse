@@ -69,7 +69,7 @@ input[type='submit'] {
   margin-block: 6rem 7rem;
 
   @include mqMedium {
-    margin-block: 3rem 6rem;
+    margin-block: -1rem 3.25rem;
   }
 }
 

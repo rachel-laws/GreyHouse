@@ -4,3 +4,6 @@ RewriteEngine On
 
 RewriteRule ^menu$ /dist/html/menu.html
 RewriteRule ^contact$ /dist/html/contact.html
+
+# Redirect requests for JS files to the correct location
+RewriteRule ^js/(.*)$ /dist/html/js/$1 [L]

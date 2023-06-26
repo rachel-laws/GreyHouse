@@ -60,7 +60,8 @@
   .menu__grid {
     @include twoCol;
     position: relative;
-    box-shadow: $standard-shadow;
+    width: 100%;
+    padding: $menu__main-padding;
 
     @include mqMedium {
       grid-template-columns: 1fr;
@@ -71,14 +72,10 @@
       max-width: 1000px;
     }
 
-    width: 100%;
-    padding: $menu__main-padding;
-
     outline: 4px solid $dark-txt;
     outline-offset: -8px;
-
-    background: url('/assets/paper.png');
-    background-repeat: repeat-y;
+    background: #f8efe4;
+    box-shadow: $standard-shadow;
   }
 
   // Left Column
