@@ -12,6 +12,10 @@
     min-height: 25vh;
     box-shadow: $home__headerImg-shadow;
 
+    @include mqXLarge {
+      margin-inline: 7.5%;
+    }
+
     @include mqNavbar {
       background-attachment: scroll;
     }

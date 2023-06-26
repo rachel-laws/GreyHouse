@@ -1192,6 +1192,11 @@ footer .copyright i {
   min-height: 25vh;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
 }
+@media all and (min-width: 1201px) {
+  .contact .contact__headerImg-container {
+    margin-inline: 7.5%;
+  }
+}
 @media all and (max-width: 650px) {
   .contact .contact__headerImg-container {
     background-attachment: scroll;
