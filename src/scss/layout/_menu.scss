@@ -15,8 +15,7 @@
 
   // Page Container
   .menu__container {
-    @include flexCenter;
-    flex-direction: column;
+    @include flexCenterCol;
     overflow: hidden;
   }
 
@@ -28,14 +27,18 @@
     @include mqMedium {
       margin-block: $menu__main-margin--medium;
     }
-
     // Left Accent Line
     &::before {
       @include pseudoElement;
       border-bottom: 1px solid $white-txt;
       top: 55%;
-      left: -100%;
-      width: 80%;
+      left: -140%;
+      width: 100%;
+
+      @include mqNavbar {
+        width: 95%;
+        left: -120%;
+      }
     }
 
     // Right Accent Line
@@ -43,8 +46,13 @@
       @include pseudoElement;
       border-bottom: 1px solid $white-txt;
       top: 55%;
-      right: -100%;
-      width: 80%;
+      right: -140%;
+      width: 100%;
+
+      @include mqNavbar {
+        width: 95%;
+        right: -120%;
+      }
     }
   }
 
@@ -55,7 +63,7 @@
     box-shadow: $standard-shadow;
 
     @include mqMedium {
-      grid-template-columns: $one-column;
+      grid-template-columns: 1fr;
       padding-inline: $menu__main-padding--medium;
     }
 
@@ -93,23 +101,13 @@
   .menu__title {
     grid-column: span 2;
 
-    @include flexCenter;
-    flex-direction: column;
+    @include flexCenterCol;
     gap: 0.25rem;
     margin-bottom: 1rem;
-
-    @include headingText;
 
     // "Gray House"
     h3 {
       position: relative;
-
-      @include headingText;
-      font-size: 2.8rem;
-
-      @include mqMedium {
-        font-size: 2rem;
-      }
 
       // Underline
       &::after {
@@ -227,7 +225,7 @@
     }
 
     @include mqSmall {
-      grid-template-columns: $one-column;
+      grid-template-columns: 1fr;
     }
 
     .menu__item {

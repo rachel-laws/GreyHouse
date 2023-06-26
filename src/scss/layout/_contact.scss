@@ -18,14 +18,15 @@
   }
 
   .contact__container {
-    @include flexCenter;
-    flex-direction: column;
+    @include flexCenterCol;
     margin-bottom: 7rem;
 
     @include mqNavbar {
-      margin-bottom: 5rem;
+      margin-bottom: 4rem;
     }
   }
+
+  // Heading
 
   h2 {
     position: relative;
@@ -36,11 +37,13 @@
     }
 
     // Left Accent Line
+
     &::before {
       @include pseudoElement;
-      border-bottom: 1px solid $white-txt;
       top: 55%;
       left: -100%;
+
+      border-bottom: 1px solid $white-txt;
       width: 80%;
 
       @include mqNavbar {
@@ -50,12 +53,14 @@
     }
 
     // Right Accent Line
+
     &::after {
       @include pseudoElement;
-      border-bottom: 1px solid $white-txt;
       top: 55%;
       right: -100%;
+
       width: 80%;
+      border-bottom: 1px solid $white-txt;
 
       @include mqNavbar {
         width: 50%;
@@ -65,19 +70,12 @@
   }
 
   form {
-    @include flexCol;
-    align-items: center;
-    width: 50vw;
+    position: relative;
+    @include flexCenterCol;
     gap: 2rem;
-    padding: 3rem 8vw;
-
-    @include mqMedium {
-      width: 65vw;
-    }
-
-    @include mqNavbar {
-      width: 90vw;
-    }
+    width: 50vw;
+    max-width: 1300px;
+    padding: 4rem 8vw 3.5rem;
 
     background: $card-bg;
     border: 2px solid $menu-accent;
@@ -85,23 +83,90 @@
     outline-offset: -10px;
     box-shadow: $standard-shadow;
 
+    @include mqMedium {
+      width: 65vw;
+      padding-bottom: 0.7rem;
+    }
+
+    @include mqNavbar {
+      gap: 1rem;
+      width: 90vw;
+      padding-bottom: 0.25rem;
+    }
+
+    // Required Text
+
+    &::after {
+      position: absolute;
+      content: '* Required';
+
+      top: 0.75rem;
+      left: 0.75rem;
+
+      font-size: 0.9rem;
+      color: rgba(223 160 160 / 0.7);
+    }
+
+    // Bottom Left Image
+
+    &::before {
+      @include pseudoElement;
+
+      width: 43rem;
+      height: 96%;
+      left: -102.2px;
+      bottom: -39.5px;
+
+      background-image: url('/assets/lemon_frame.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      pointer-events: none;
+
+      @include mqMedium {
+        display: none;
+      }
+    }
+
+    // Top Right Image
+
+    img {
+      position: absolute;
+      width: 9rem;
+
+      right: -3.8rem;
+      top: -2.8rem;
+      transform: rotate(9.5deg);
+
+      @include mqMedium {
+        display: none;
+      }
+    }
+
+    // Labels
+
     label {
       display: block;
       font-size: 1.3rem;
       width: 100%;
     }
 
+    // Inputs
+
     input,
     textarea {
-      font-size: 1.05rem;
-      box-shadow: 2px 2px 10px black;
-      border: none;
-      font-family: inherit;
+      display: block;
       width: 100%;
+      box-shadow: 2px 2px 10px black;
+    }
+
+    textarea {
+      margin-top: 0.75rem;
+      padding: 0.6rem 0.75rem;
+      resize: none;
+      border: none;
     }
 
     input:not([type='submit']) {
-      display: block;
       padding: 0.5rem 0.75rem;
       margin-top: 0.75rem;
       border: none;
@@ -112,32 +177,23 @@
       justify-content: space-between;
       width: 100%;
       gap: 2rem;
+
+      @include mqNavbar {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
     }
 
-    textarea {
-      display: block;
-      resize: none;
-      font-family: inherit;
-      margin-top: 0.75rem;
-      border: none;
-      padding: 0.6rem 0.75rem;
-    }
+    .form__message {
+      margin-block: 0.9rem 0.6rem;
 
-    input[type='submit'] {
-      margin-top: 0.5rem;
-      width: 8rem;
-      height: 3rem;
+      color: transparent;
+      transition: 250ms ease;
+      animation: fadeIn 2s ease;
 
-      font-size: 1.5rem;
-      font-weight: 500;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-
-      outline-offset: 4px;
-      outline: 1px solid $menu-accent;
-      border: 2px solid $menu-accent;
-      background: $dark-txt;
-      text-shadow: -1px 1px 8px rgba(127 127 127 / 0.8);
+      @include mqSmall {
+        font-size: 0.9rem;
+      }
     }
   }
 }

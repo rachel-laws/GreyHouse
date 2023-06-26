@@ -15,10 +15,15 @@ html {
 img {
   width: 100%;
   display: block;
+  user-select: none;
 }
 
 body {
   background: $body-bg;
+}
+
+main {
+  min-height: 88.5vh;
 }
 
 .sr-only {
@@ -53,7 +58,7 @@ body {
   &::after {
     @include pseudoElement;
     inset: 0;
-    background: linear-gradient(to left, transparent 70%, $body-bg);
+    background: linear-gradient(-90deg, transparent 65%, #0e0e0e);
   }
 
   @include mqMedium {

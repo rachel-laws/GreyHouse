@@ -4,8 +4,8 @@
   // Header Image
 
   .home__headerImg-container {
-    background-position: top center;
     background-size: cover;
+    background-position: top center;
     background-attachment: fixed;
 
     height: 67vh;
@@ -111,19 +111,24 @@
   }
 }
 
+// Paragraph Text
+
 .home__text {
   @include flexCol;
   gap: 1.5rem 0rem;
 
+  // Card
+
   @include mqXLarge {
-    background-color: $card-bg;
     padding: 3rem 3vw;
+    background-color: $card-bg;
     box-shadow: $standard-shadow;
     border: 2px solid $menu-accent;
     outline: 1px solid $menu-accent;
     outline-offset: -10px;
   }
 
+  // "Get Directions"
   a {
     display: block;
     width: 7rem;
@@ -132,6 +137,8 @@
       color: $link-hover;
     }
   }
+
+  // Location Icon
 
   i {
     font-size: 1rem;
@@ -144,7 +151,7 @@
   }
 }
 
-// Guest Reviews
+// Reviews
 
 .reviews {
   margin-top: 6rem;
@@ -158,6 +165,8 @@
     margin-inline: auto !important;
   }
 
+  // Heading
+
   h2 {
     margin-bottom: 4rem;
     text-align: center;
@@ -167,21 +176,26 @@
     }
   }
 
+  // Main Grid
+
   .grid-container {
-    @include twoCol;
     position: relative;
+    @include twoCol;
+
     justify-content: space-between;
     gap: 2rem calc(2rem + 5vw);
 
     @include mqMedium {
-      grid-template-columns: $one-column;
+      grid-template-columns: 1fr;
       gap: 1rem;
     }
   }
 
+  // Review Row
+
   .review__row-container {
-    display: flex;
     position: relative;
+    display: flex;
     justify-content: space-between;
 
     padding-block: 0.5rem;
@@ -191,6 +205,8 @@
       flex-direction: column;
     }
   }
+
+  // Review Stars
 
   .stars {
     width: 7.25rem;
@@ -207,6 +223,7 @@
     @include pseudoElement;
     top: 0.9rem;
     left: 50%;
+
     width: 1px;
     height: 93%;
     background: #3a3a3a;

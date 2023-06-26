@@ -1,60 +1,83 @@
+//* Presets
+
+// Flex Center
 @mixin flexCenter {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+// Flex Column
 @mixin flexCol {
   display: flex;
   flex-direction: column;
 }
 
+// Flex Center Column
+@mixin flexCenterCol {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+// Two Column Grid
 @mixin twoCol {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
+// Before/After
 @mixin pseudoElement {
   position: absolute;
   content: '';
 }
 
+// Heading Text
 @mixin headingText {
   text-transform: uppercase;
   text-align: center;
   font-weight: 500;
 }
 
+//* Media Queries
+
+// Greater than 3000px
 @mixin mqXXLarge {
   @media all and (min-width: 3000px) {
     @content;
   }
 }
 
+// Greater than 1201px
 @mixin mqXLarge {
   @media all and (min-width: 1201px) {
     @content;
   }
 }
 
-@mixin mqLarge {
-  @media all and (min-width: 651px) {
-    @content;
-  }
-}
-
+// Less than 651px
 @mixin mqMedium {
   @media all and (max-width: 1200px) {
     @content;
   }
 }
 
+// Greater than 651px
+@mixin mqLarge {
+  @media all and (min-width: 651px) {
+    @content;
+  }
+}
+
+// Less than 650px
 @mixin mqNavbar {
   @media all and (max-width: 650px) {
     @content;
   }
 }
 
+// Less than 470px
 @mixin mqSmall {
   @media all and (max-width: 470px) {
     @content;

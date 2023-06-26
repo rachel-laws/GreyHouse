@@ -1,18 +1,48 @@
+//* Text
+
+// White
 $white-txt: #f5f5f5;
+
+// Black
 $dark-txt: #0b0b0b;
-$faded-txt: #595050;
+
+// Tinted
 $medium-txt: #504646;
+
+// Faded
+$faded-txt: #595050;
+
+// Light Faded
 $menu-accent-txt: #e4c9cf;
 
+// Links
 $link-txt: #91a0d2;
 $link-hover: #a6b4e3;
+
+//* Accents
+
+// Menu Accent
 $menu-accent: #73404a;
 
-$header-bg: linear-gradient(90deg, #111111, #000 35%, #000 65%, #111111);
-$mobile-header-bg: linear-gradient(90deg, #111111, #000 20%, #000 80%, #111111);
-$small-header-bg: #000;
-$card-bg: #1d1d1d;
+//* Backgrounds
 
+// Header
+$header-bg: linear-gradient(90deg, #111111, #000 35%, #000 65%, #111111);
+
+// Header Mobile
+$mobile-header-bg: linear-gradient(90deg, #111111, #000 20%, #000 80%, #111111);
+
+// Header Small
+$small-header-bg: #000;
+
+// Navigation Bar
 $nav-bg: #040404;
-$body-bg: #141414;
+
+// Body
+$body-bg: linear-gradient(to bottom, #141414, #0d0d0d);
+
+// Cards
+$card-bg: linear-gradient(33deg, #212121, #181818);
+
+// Footer
 $footer-bg: linear-gradient(90deg, #0a0a0a, #000 35%, #000 65%, #0a0a0a);

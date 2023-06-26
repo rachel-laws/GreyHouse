@@ -5,10 +5,6 @@
 // General
 $standard-shadow: 0 0 15px rgb(0 0 0 / 0.35);
 
-// Layout
-$two-column: 1fr 1fr;
-$one-column: 1fr;
-
 // Home Page
 
 // Main Block Margins
@@ -32,8 +28,7 @@ $home__headerImg-margin--small: 3rem;
 
 // Main Block Margins
 $menu__main-margin: 4rem;
-$menu__main-margin--medium: 3rem;
-
+$menu__main-margin--medium: 2.25rem;
 
 // Main Inline Margins
 $menu__main-marginInline: 12vw;
@@ -79,4 +74,4 @@ $menu__pictures-shadow: 0 0 15px rgb(0 0 0 / 0.15);
 // Main Block Margins
 
 $contact__headerImg-margin: 4rem;
-$contact__headerImg-margin--medium: 3rem;
+$contact__headerImg-margin--medium: 2.5rem;

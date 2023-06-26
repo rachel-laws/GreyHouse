@@ -70,19 +70,34 @@ executeOnLargeScreen(changeHeaderImg);
 
 // Fade In
 
-let isLoaded = false;
+// let isLoaded = false;
 
-window.onload = function fadeInBody() {
-  if (isLoaded) {
-    return;
-  }
-  isLoaded = true;
-  const body = document.body;
-  body.style.opacity = 0;
-  body.style.animation = 'fadeIn 300ms ease 1';
+// window.onload = function fadeInBody() {
+//   if (isLoaded) {
+//     return;
+//   }
+//   isLoaded = true;
+//   const body = document.body;
+//   body.style.opacity = 0;
+//   body.style.animation = 'fadeIn 300ms ease 1';
 
-  setTimeout(function () {
-    body.style.opacity = 1;
-    console.log('hi');
-  }, 300);
-};
+//   setTimeout(function () {
+//     body.style.opacity = 1;
+//     console.log('hi');
+//   }, 300);
+// };
+
+// Contact Form Submission
+
+const contactForm = document.querySelector('#contactForm');
+const submitMessage = document.querySelector('#formMessage');
+
+if (contactForm) {
+  contactForm.addEventListener('submit', e => {
+    e.preventDefault();
+    contactForm.reset();
+    setTimeout(function () {
+      submitMessage.style.color = 'white';
+    }, 250);
+  });
+}

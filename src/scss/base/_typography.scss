@@ -6,17 +6,6 @@ html {
   font-family: 'Belleza', sans-serif;
 }
 
-h1,
-h2 {
-  font-size: 2.5rem;
-  font-weight: normal;
-  margin-top: -8px; /* Fixes top space from font */
-
-  @include mqNavbar {
-    font-size: 2rem;
-  }
-}
-
 body {
   color: $white-txt;
   font-size: 1.15rem;
@@ -35,6 +24,17 @@ body {
   }
 }
 
+h1,
+h2 {
+  font-size: 2.5rem;
+  font-weight: normal;
+  margin-top: -8px; /* Fix top space from font */
+
+  @include mqNavbar {
+    font-size: 2rem;
+  }
+}
+
 // Header
 .infobar {
   font-size: 1rem;
@@ -46,6 +46,7 @@ body {
 
 // Home
 
+// Reviews
 .review__name span {
   padding-inline: 0.25rem;
   font-size: 1.3rem;
@@ -62,11 +63,36 @@ body {
   color: $dark-txt;
 }
 
+// "Gray House"
+.menu__title {
+  @include headingText;
+
+  h3 {
+    @include headingText;
+    font-size: 2.8rem;
+
+    @include mqMedium {
+      font-size: 2rem;
+    }
+  }
+
+  // "Authentic Mediterranean Cuisine"
+  p {
+    font-size: 0.95rem;
+
+    @include mqMedium {
+      font-size: 0.7rem;
+    }
+  }
+}
+
+// Section Headings
 .menu__heading {
   @include headingText;
   font-size: 1.4rem;
 }
 
+// Item Names
 .menu__name {
   font-size: 1.05rem;
 
@@ -79,12 +105,14 @@ body {
   }
 }
 
+// Item Descriptions
 .menu__description {
   font-size: 0.8rem;
   color: $faded-txt;
   line-height: 1.3;
 }
 
+// Special Menu Sections
 .menu__beverages,
 .menu__sides {
   p {
@@ -96,4 +124,28 @@ body {
 .menu__soups-dressings {
   font-size: 0.8rem;
   color: $menu-accent-txt;
+}
+
+// Contact
+
+// Inputs
+input,
+textarea {
+  font-size: 1.05rem;
+  font-family: inherit;
+}
+
+// Submit Button
+input[type='submit'] {
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-shadow: -1px 1px 8px rgba(127 127 127 / 0.8);
+}
+
+// "Required"
+.form__required {
+  font-size: 0.8rem;
+  color: rgba(223 160 160 / 0.7);
 }

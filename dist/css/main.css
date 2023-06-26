@@ -13,10 +13,15 @@
 img {
   width: 100%;
   display: block;
+  user-select: none;
 }
 
 body {
-  background: #141414;
+  background: linear-gradient(to bottom, #141414, #0d0d0d);
+}
+
+main {
+  min-height: 88.5vh;
 }
 
 .sr-only {
@@ -38,7 +43,7 @@ body {
 .accent__left,
 .accent__right {
   position: fixed;
-  background: linear-gradient(180deg, transparent, #141414);
+  background: linear-gradient(180deg, transparent, linear-gradient(to bottom, #141414, #0d0d0d));
   background-image: url("/assets/sides.svg");
   background-repeat: repeat-y;
   background-size: 100%;
@@ -51,7 +56,7 @@ body {
   position: absolute;
   content: "";
   inset: 0;
-  background: linear-gradient(to left, transparent 70%, #141414);
+  background: linear-gradient(-90deg, transparent 65%, #0e0e0e);
 }
 @media all and (max-width: 1200px) {
   .accent__left,
@@ -99,19 +104,6 @@ html {
   font-family: "Belleza", sans-serif;
 }
 
-h1,
-h2 {
-  font-size: 2.5rem;
-  font-weight: normal;
-  margin-top: -8px; /* Fixes top space from font */
-}
-@media all and (max-width: 650px) {
-  h1,
-  h2 {
-    font-size: 2rem;
-  }
-}
-
 body {
   color: #f5f5f5;
   font-size: 1.15rem;
@@ -127,6 +119,19 @@ body p {
 body a {
   color: #91a0d2;
   transition: 150ms;
+}
+
+h1,
+h2 {
+  font-size: 2.5rem;
+  font-weight: normal;
+  margin-top: -8px; /* Fix top space from font */
+}
+@media all and (max-width: 650px) {
+  h1,
+  h2 {
+    font-size: 2rem;
+  }
 }
 
 .infobar {
@@ -150,6 +155,31 @@ body a {
 
 .menu__grid {
   color: #0b0b0b;
+}
+
+.menu__title {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 500;
+}
+.menu__title h3 {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 500;
+  font-size: 2.8rem;
+}
+@media all and (max-width: 1200px) {
+  .menu__title h3 {
+    font-size: 2rem;
+  }
+}
+.menu__title p {
+  font-size: 0.95rem;
+}
+@media all and (max-width: 1200px) {
+  .menu__title p {
+    font-size: 0.7rem;
+  }
 }
 
 .menu__heading {
@@ -188,29 +218,31 @@ body a {
   color: #e4c9cf;
 }
 
+input,
+textarea {
+  font-size: 1.05rem;
+  font-family: inherit;
+}
+
+input[type=submit] {
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-shadow: -1px 1px 8px rgba(127, 127, 127, 0.8);
+}
+
+.form__required {
+  font-size: 0.8rem;
+  color: rgba(223, 160, 160, 0.7);
+}
+
 button,
 input[type=submit] {
   cursor: pointer;
   font-family: inherit;
   color: #f5f5f5;
-}
-
-#home__reservation-btn {
-  margin-block: 6rem 7rem;
-}
-@media all and (max-width: 1200px) {
-  #home__reservation-btn {
-    margin-block: 3rem 6rem;
-  }
-}
-
-#menu__reservation-btn {
-  margin-block: 2rem 6rem;
-}
-@media all and (max-width: 1200px) {
-  #menu__reservation-btn {
-    margin-block: 1rem 5rem;
-  }
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.35);
 }
 
 .reservation {
@@ -219,14 +251,14 @@ input[type=submit] {
   color: #f5f5f5;
   font-size: 1.8rem;
   text-decoration: none;
-  outline: 4px solid #141414;
-  border: 4px solid #5e353d;
-  outline-offset: -0.5rem;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.35);
   background: url("/assets/vines.svg");
   background-size: contain;
   background-position: center;
   background-color: #5e353d;
+  outline: 4px solid #161616;
+  border: 4px solid #522931;
+  outline-offset: -0.5rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.35);
   transition: 200ms ease;
 }
 @media all and (max-width: 1200px) {
@@ -260,6 +292,49 @@ input[type=submit] {
     background: transparent;
     width: 0;
   }
+}
+
+#home__reservation-btn {
+  margin-block: 6rem 7rem;
+}
+@media all and (max-width: 1200px) {
+  #home__reservation-btn {
+    margin-block: 3rem 6rem;
+  }
+}
+
+#menu__reservation-btn {
+  margin-block: 5.5rem 6rem;
+}
+@media all and (max-width: 1200px) {
+  #menu__reservation-btn {
+    margin-block: 3.25rem;
+  }
+}
+
+input[type=submit] {
+  position: relative;
+  height: 3rem;
+  margin-top: 1.5rem;
+  outline-offset: 4px;
+  outline: 1px solid #73404a;
+  border: 2px solid #73404a;
+  background: #0b0b0b;
+  transition: 200ms ease;
+}
+@media all and (max-width: 650px) {
+  input[type=submit] {
+    margin-top: 1rem;
+  }
+}
+input[type=submit]:hover {
+  border-color: #9b626d;
+  outline-color: #9b626d;
+}
+input[type=submit]:active {
+  transform: scale(1.03);
+  border-color: #522830;
+  outline-color: #522830;
 }
 
 header {
@@ -614,8 +689,8 @@ footer .copyright i {
   }
 }
 .home .home__headerImg-container {
-  background-position: top center;
   background-size: cover;
+  background-position: top center;
   background-attachment: fixed;
   height: 67vh;
   margin-bottom: 6rem;
@@ -722,8 +797,8 @@ footer .copyright i {
 }
 @media all and (min-width: 1201px) {
   .home__text {
-    background-color: #1d1d1d;
     padding: 3rem 3vw;
+    background-color: linear-gradient(33deg, #212121, #181818);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.35);
     border: 2px solid #73404a;
     outline: 1px solid #73404a;
@@ -770,9 +845,9 @@ footer .copyright i {
   }
 }
 .reviews .grid-container {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  position: relative;
   justify-content: space-between;
   gap: 2rem calc(2rem + 5vw);
 }
@@ -783,8 +858,8 @@ footer .copyright i {
   }
 }
 .reviews .review__row-container {
-  display: flex;
   position: relative;
+  display: flex;
   justify-content: space-between;
   padding-block: 0.5rem;
   border-bottom: 1px solid #3a3a3a;
@@ -840,9 +915,9 @@ footer .copyright i {
 }
 .menu .menu__container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   overflow: hidden;
 }
 .menu h2 {
@@ -851,7 +926,7 @@ footer .copyright i {
 }
 @media all and (max-width: 1200px) {
   .menu h2 {
-    margin-block: 3rem;
+    margin-block: 2.25rem;
   }
 }
 .menu h2::before {
@@ -859,16 +934,28 @@ footer .copyright i {
   content: "";
   border-bottom: 1px solid #f5f5f5;
   top: 55%;
-  left: -100%;
-  width: 80%;
+  left: -140%;
+  width: 100%;
+}
+@media all and (max-width: 650px) {
+  .menu h2::before {
+    width: 95%;
+    left: -120%;
+  }
 }
 .menu h2::after {
   position: absolute;
   content: "";
   border-bottom: 1px solid #f5f5f5;
   top: 55%;
-  right: -100%;
-  width: 80%;
+  right: -140%;
+  width: 100%;
+}
+@media all and (max-width: 650px) {
+  .menu h2::after {
+    width: 95%;
+    right: -120%;
+  }
 }
 .menu .menu__grid {
   display: grid;
@@ -909,26 +996,14 @@ footer .copyright i {
 .menu .menu__title {
   grid-column: span 2;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   gap: 0.25rem;
   margin-bottom: 1rem;
-  text-transform: uppercase;
-  text-align: center;
-  font-weight: 500;
 }
 .menu .menu__title h3 {
   position: relative;
-  text-transform: uppercase;
-  text-align: center;
-  font-weight: 500;
-  font-size: 2.8rem;
-}
-@media all and (max-width: 1200px) {
-  .menu .menu__title h3 {
-    font-size: 2rem;
-  }
 }
 .menu .menu__title h3::after {
   position: absolute;
@@ -1096,14 +1171,14 @@ footer .copyright i {
 }
 .contact .contact__container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   margin-bottom: 7rem;
 }
 @media all and (max-width: 650px) {
   .contact .contact__container {
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
   }
 }
 .contact h2 {
@@ -1112,15 +1187,15 @@ footer .copyright i {
 }
 @media all and (max-width: 1200px) {
   .contact h2 {
-    margin-block: 3rem;
+    margin-block: 2.5rem;
   }
 }
 .contact h2::before {
   position: absolute;
   content: "";
-  border-bottom: 1px solid #f5f5f5;
   top: 55%;
   left: -100%;
+  border-bottom: 1px solid #f5f5f5;
   width: 80%;
 }
 @media all and (max-width: 650px) {
@@ -1132,10 +1207,10 @@ footer .copyright i {
 .contact h2::after {
   position: absolute;
   content: "";
-  border-bottom: 1px solid #f5f5f5;
   top: 55%;
   right: -100%;
   width: 80%;
+  border-bottom: 1px solid #f5f5f5;
 }
 @media all and (max-width: 650px) {
   .contact h2::after {
@@ -1144,13 +1219,16 @@ footer .copyright i {
   }
 }
 .contact form {
+  position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  width: 50vw;
   gap: 2rem;
-  padding: 3rem 8vw;
-  background: #1d1d1d;
+  width: 50vw;
+  max-width: 1300px;
+  padding: 4rem 8vw 3.5rem;
+  background: linear-gradient(33deg, #212121, #181818);
   border: 2px solid #73404a;
   outline: 1px solid #73404a;
   outline-offset: -10px;
@@ -1159,11 +1237,51 @@ footer .copyright i {
 @media all and (max-width: 1200px) {
   .contact form {
     width: 65vw;
+    padding-bottom: 0.7rem;
   }
 }
 @media all and (max-width: 650px) {
   .contact form {
+    gap: 1rem;
     width: 90vw;
+    padding-bottom: 0.25rem;
+  }
+}
+.contact form::after {
+  position: absolute;
+  content: "* Required";
+  top: 0.75rem;
+  left: 0.75rem;
+  font-size: 0.9rem;
+  color: rgba(223, 160, 160, 0.7);
+}
+.contact form::before {
+  position: absolute;
+  content: "";
+  width: 43rem;
+  height: 96%;
+  left: -102.2px;
+  bottom: -39.5px;
+  background-image: url("/assets/lemon_frame.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+@media all and (max-width: 1200px) {
+  .contact form::before {
+    display: none;
+  }
+}
+.contact form img {
+  position: absolute;
+  width: 9rem;
+  right: -3.8rem;
+  top: -2.8rem;
+  transform: rotate(9.5deg);
+}
+@media all and (max-width: 1200px) {
+  .contact form img {
+    display: none;
   }
 }
 .contact form label {
@@ -1173,14 +1291,17 @@ footer .copyright i {
 }
 .contact form input,
 .contact form textarea {
-  font-size: 1.05rem;
-  box-shadow: 2px 2px 10px black;
-  border: none;
-  font-family: inherit;
+  display: block;
   width: 100%;
+  box-shadow: 2px 2px 10px black;
+}
+.contact form textarea {
+  margin-top: 0.75rem;
+  padding: 0.6rem 0.75rem;
+  resize: none;
+  border: none;
 }
 .contact form input:not([type=submit]) {
-  display: block;
   padding: 0.5rem 0.75rem;
   margin-top: 0.75rem;
   border: none;
@@ -1191,27 +1312,22 @@ footer .copyright i {
   width: 100%;
   gap: 2rem;
 }
-.contact form textarea {
-  display: block;
-  resize: none;
-  font-family: inherit;
-  margin-top: 0.75rem;
-  border: none;
-  padding: 0.6rem 0.75rem;
+@media all and (max-width: 650px) {
+  .contact form .form__personal-info {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
 }
-.contact form input[type=submit] {
-  margin-top: 0.5rem;
-  width: 8rem;
-  height: 3rem;
-  font-size: 1.5rem;
-  font-weight: 500;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  outline-offset: 4px;
-  outline: 1px solid #73404a;
-  border: 2px solid #73404a;
-  background: #0b0b0b;
-  text-shadow: -1px 1px 8px rgba(127, 127, 127, 0.8);
+.contact form .form__message {
+  margin-block: 0.9rem 0.6rem;
+  color: transparent;
+  transition: 250ms ease;
+  animation: fadeIn 2s ease;
+}
+@media all and (max-width: 470px) {
+  .contact form .form__message {
+    font-size: 0.9rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
