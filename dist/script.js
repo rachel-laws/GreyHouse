@@ -30,6 +30,21 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+// Sticky Navbar (for bug fix)
+
+window.addEventListener('load', () => {
+  const navbar = document.querySelector('#navbar');
+  const navOffset = navbar.offsetTop;
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY >= navOffset) {
+      navbar.classList.add('sticky');
+    } else {
+      navbar.classList.remove('sticky');
+    }
+  });
+});
+
 // Image Carousel
 
 function preloadImages(imageSources) {

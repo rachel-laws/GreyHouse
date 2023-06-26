@@ -1,10 +1,22 @@
 @use '../abstracts' as *;
 
-nav {
-  @include flexCenter;
-  position: sticky;
+.sticky {
+  position: fixed;
   top: 0;
+}
+
+.sticky + main {
+  margin-top: 44.3px;
+}
+
+nav {
+  position: relative;
+  @include flexCenter;
   z-index: 9999;
+  left: 0;
+  overflow: hidden;
+
+  right: 0;
 
   padding: 0.75rem;
   border-top: 1px solid #ffffff11;
@@ -69,15 +81,13 @@ nav {
 
   .showMobileNav {
     @include mqNavbar {
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      @include flexCenterCol;
       gap: 1rem;
     }
   }
 
   .showMobileNav {
-    // animation: slideIn 0.3s forwards;
+    animation: slideIn 0.3s forwards;
 
     a {
       display: block !important;

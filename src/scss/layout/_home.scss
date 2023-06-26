@@ -4,13 +4,13 @@
   // Header Image
 
   .home__headerImg-container {
-    background-size: cover;
-    background-position: top center;
-    background-attachment: fixed;
-
     height: 67vh;
     margin-bottom: $home__headerImg-margin;
     box-shadow: $home__headerImg-shadow;
+
+    background-size: cover;
+    background-position: top center;
+    background-attachment: fixed;
 
     @include mqMedium {
       margin-bottom: $home__headerImg-margin--medium;
@@ -25,23 +25,12 @@
     transition: background-image 2000ms ease;
   }
 
-  @include mqXLarge {
-    .home__headerImg-container.headerImg-1 {
-      background-image: url('/assets/header_1.jpg');
-    }
-
-    .home__headerImg-container.headerImg-2 {
-      background-image: url('/assets/header_2.jpg');
-    }
+  .home__headerImg-container.headerImg-1 {
+    background-image: url('/assets/header_1-medium.png');
   }
-  @include mqMedium {
-    .home__headerImg-container.headerImg-1 {
-      background-image: url('/assets/header_1-medium.png');
-    }
 
-    .home__headerImg-container.headerImg-2 {
-      background-image: url('/assets/header_2-medium.png');
-    }
+  .home__headerImg-container.headerImg-2 {
+    background-image: url('/assets/header_2-medium.png');
   }
   @include mqNavbar {
     .home__headerImg-container.headerImg-1 {

@@ -449,13 +449,24 @@ header a {
   color: rgb(255, 56, 56);
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+}
+
+.sticky + main {
+  margin-top: 44.3px;
+}
+
 nav {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: sticky;
-  top: 0;
   z-index: 9999;
+  left: 0;
+  overflow: hidden;
+  right: 0;
   padding: 0.75rem;
   border-top: 1px solid rgba(255, 255, 255, 0.0666666667);
   background: #040404;
@@ -511,11 +522,15 @@ nav ul {
 }
 @media all and (max-width: 650px) {
   nav .showMobileNav {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1rem;
   }
+}
+nav .showMobileNav {
+  animation: slideIn 0.3s forwards;
 }
 nav .showMobileNav a {
   display: block !important;
@@ -694,12 +709,12 @@ footer .copyright i {
   }
 }
 .home .home__headerImg-container {
-  background-size: cover;
-  background-position: top center;
-  background-attachment: fixed;
   height: 67vh;
   margin-bottom: 6rem;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+  background-size: cover;
+  background-position: top center;
+  background-attachment: fixed;
   transition: background-image 2000ms ease;
 }
 @media all and (max-width: 1200px) {
@@ -714,21 +729,11 @@ footer .copyright i {
     background-attachment: scroll;
   }
 }
-@media all and (min-width: 1201px) {
-  .home .home__headerImg-container.headerImg-1 {
-    background-image: url("/assets/header_1.jpg");
-  }
-  .home .home__headerImg-container.headerImg-2 {
-    background-image: url("/assets/header_2.jpg");
-  }
+.home .home__headerImg-container.headerImg-1 {
+  background-image: url("/assets/header_1-medium.png");
 }
-@media all and (max-width: 1200px) {
-  .home .home__headerImg-container.headerImg-1 {
-    background-image: url("/assets/header_1-medium.png");
-  }
-  .home .home__headerImg-container.headerImg-2 {
-    background-image: url("/assets/header_2-medium.png");
-  }
+.home .home__headerImg-container.headerImg-2 {
+  background-image: url("/assets/header_2-medium.png");
 }
 @media all and (max-width: 650px) {
   .home .home__headerImg-container.headerImg-1 {
