@@ -1,1 +1,6 @@
 DirectoryIndex ./dist/html/index.html
+
+RewriteEngine On
+
+RewriteRule ^menu$ /dist/html/menu.html
+RewriteRule ^contact$ /dist/html/contact.html
