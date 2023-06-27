@@ -33,6 +33,13 @@ h2 {
   @include mqNavbar {
     font-size: 2rem;
   }
+
+  @include mqSmall {
+    text-align: center;
+    .next-line {
+      display: block;
+    }
+  }
 }
 
 // Header

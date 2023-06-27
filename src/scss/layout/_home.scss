@@ -71,6 +71,15 @@
       &::after {
         @include pseudoElement;
       }
+
+      @include mqSmall {
+        text-align: center;
+      }
+
+      .next-line {
+        display: block;
+        color: red;
+      }
     }
 
     @include mqMedium {
@@ -167,6 +176,10 @@
     margin-top: 4rem;
   }
 
+  @include mqNavbar {
+    margin-top: 2rem;
+  }
+
   @include mqXXLarge {
     max-width: 1600px;
     margin-inline: auto !important;
@@ -179,7 +192,11 @@
     text-align: center;
 
     @include mqMedium {
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    @include mqNavbar {
+      margin-bottom: 0.8rem;
     }
   }
 

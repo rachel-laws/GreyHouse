@@ -134,6 +134,16 @@ h2 {
     font-size: 2rem;
   }
 }
+@media all and (max-width: 470px) {
+  h1,
+  h2 {
+    text-align: center;
+  }
+  h1 .next-line,
+  h2 .next-line {
+    display: block;
+  }
+}
 
 .infobar {
   font-size: 1rem;
@@ -761,7 +771,7 @@ footer .copyright i {
 @media all and (max-width: 650px) {
   .home .home__headerImg-container {
     height: 35vh;
-    margin-bottom: 3rem;
+    margin-bottom: 2.8rem;
     background-attachment: scroll;
   }
 }
@@ -809,6 +819,15 @@ footer .copyright i {
 .home .paragraph h2::after {
   position: absolute;
   content: "";
+}
+@media all and (max-width: 470px) {
+  .home .paragraph h2 {
+    text-align: center;
+  }
+}
+.home .paragraph h2 .next-line {
+  display: block;
+  color: red;
 }
 @media all and (max-width: 1200px) {
   .home .paragraph {
@@ -893,6 +912,11 @@ footer .copyright i {
     margin-top: 4rem;
   }
 }
+@media all and (max-width: 650px) {
+  .reviews {
+    margin-top: 2rem;
+  }
+}
 @media all and (min-width: 3000px) {
   .reviews {
     max-width: 1600px;
@@ -905,7 +929,12 @@ footer .copyright i {
 }
 @media all and (max-width: 1200px) {
   .reviews h2 {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
+  }
+}
+@media all and (max-width: 650px) {
+  .reviews h2 {
+    margin-bottom: 0.8rem;
   }
 }
 .reviews .grid-container {
