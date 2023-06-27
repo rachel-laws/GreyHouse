@@ -1,18 +1,12 @@
 // Fade In
 
-let isLoaded = false;
-
 window.onload = function fadeInBody() {
-  if (isLoaded) {
-    return;
-  }
-  isLoaded = true;
   const body = document.body;
   body.style.opacity = 0;
 
   setTimeout(function () {
     body.style.opacity = 1;
-  }, 500);
+  }, 300);
 };
 
 // Mobile Navigation
