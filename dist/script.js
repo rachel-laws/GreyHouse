@@ -28,18 +28,20 @@ document.addEventListener('DOMContentLoaded', function () {
   const rewrittenContactURL = 'https://www.lawsonwebdevelopment.com/contact';
 
   document.querySelectorAll('nav a').forEach(link => {
+    const href = link.getAttribute('href');
+
     if (
-      link.href === rewrittenHomeURL &&
+      href === rewrittenHomeURL &&
       window.location.href === rewrittenHomeURL
     ) {
       link.setAttribute('aria-current', 'page');
     } else if (
-      link.href === rewrittenMenuURL &&
+      href === rewrittenMenuURL &&
       window.location.href === rewrittenMenuURL
     ) {
       link.setAttribute('aria-current', 'page');
     } else if (
-      link.href === rewrittenContactURL &&
+      href === rewrittenContactURL &&
       window.location.href === rewrittenContactURL
     ) {
       link.setAttribute('aria-current', 'page');
