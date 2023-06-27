@@ -21,40 +21,36 @@
   </head>
   <body>
     <div class="preload">
-      <img src="/assets/header_1-medium.png" alt="" />
-      <img src="/assets/header_2-medium.png" alt="" />
-      <img src="/assets/header_1-small.png" alt="" />
-      <img src="/assets/header_2-small.png" alt="" />
+      <img src="/assets/header_1.jpg" alt="" />
+      <img src="/assets/header_2.jpg" alt="" />
+      <img src="/assets/header_1-small.jpg" alt="" />
+      <img src="/assets/header_2-small.jpg" alt="" />
     </div>
     <header>
+      <a href="#navbar" class="sr-only"> Skip link: Skip to navigation bar </a>
       <div class="infobar__container">
         <div class="infobar">
           <p class="sr-only">Contact Information</p>
-          <a href="#navbar" class="sr-only">
-            Skip link: Skip to navigation bar
-          </a>
-          <a href="#welcome" class="sr-only">
-            Skip link: Skip to main content
-          </a>
           <a class="email" href="">
-            <span class="sr-only">Email:</span>
+            <span class="sr-only">Email</span>
             info@grayhouse.com
           </a>
           <p class="phone">
-            <span class="sr-only">Phone Number:</span>
+            <span class="sr-only">Phone Number</span>
             1-734-123-4567
           </p>
           <div class="socials">
-            <a class="facebook" href="" title="Facebook">
-              <span class="sr-only">Facebook</span>
+            <a class="facebook" href="" title="Facebook" aria-label="Facebook">
               <i class="fa-brands fa-facebook-f"></i>
             </a>
-            <a class="instagram" href="" title="Instagram">
-              <span class="sr-only">Instagram</span>
+            <a
+              class="instagram"
+              href=""
+              title="Instagram"
+              aria-label="Instagram">
               <i class="fa-brands fa-instagram"></i>
             </a>
-            <a class="yelp" href="" title="Yelp">
-              <span class="sr-only">Yelp</span>
+            <a class="yelp" href="" title="Yelp" aria-label="Yelp">
               <i class="fa-brands fa-yelp"></i>
             </a>
           </div>
@@ -66,10 +62,14 @@
         class="logo" />
     </header>
     <nav aria-label="Navigation" id="navbar">
-      <button id="toggleMobileNav" class="nav__toggle" aria-controls="navbar">
+      <button
+        id="toggleMobileNav"
+        class="nav__toggle"
+        aria-controls="navbar"
+        aria-label="Toggle Navigation">
         <i class="bi bi-list"></i>
-        <span class="sr-only">Navigation</span>
       </button>
+      <a href="#welcome" class="sr-only"> Skip link: Skip to main content </a>
       <ul id="navList">
         <li>
           <a href="https://lawsonwebdevelopment.com/" id="home__link"> Home </a>

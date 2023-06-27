@@ -18,7 +18,7 @@ img {
 
 body {
   background: linear-gradient(to bottom, #141414, #0d0d0d);
-  transition: 250ms ease;
+  transition: 280ms ease;
 }
 
 main {
@@ -1186,7 +1186,7 @@ footer .copyright i {
 }
 
 .contact .contact__headerImg-container {
-  background-image: url("/assets/contact.png");
+  background-image: url("/assets/contact.jpg");
   background-attachment: fixed;
   background-position: top center;
   background-size: cover;
