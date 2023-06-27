@@ -23,7 +23,7 @@ mobileNavBtn.addEventListener('click', e => {
 // Active Page Underline
 
 document.addEventListener('DOMContentLoaded', function () {
-  const rewrittenHomeURL = 'https://www.lawsonwebdevelopment.com/';
+  const rewrittenHomeURL = 'https://lawsonwebdevelopment.com/';
   const rewrittenMenuURL = 'https://www.lawsonwebdevelopment.com/menu';
   const rewrittenContactURL = 'https://www.lawsonwebdevelopment.com/contact';
 
