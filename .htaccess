@@ -2,5 +2,8 @@ DirectoryIndex ./dist/html/index.html
 
 RewriteEngine On
 
+# Exclude the JavaScript files from rewriting
+RewriteRule ^js/(.*)$ - [L]
+
 RewriteRule ^menu$ /dist/html/menu.html
 RewriteRule ^contact$ /dist/html/contact.html
