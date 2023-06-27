@@ -36,12 +36,13 @@ nav {
 
     transition: 150ms ease;
 
-    &:hover {
-      transform: rotate(-5deg) scale(1.13);
+    &:hover,
+    &:focus-visible {
+      transform: scale(1.13);
     }
 
     &:active {
-      transform: rotate(-5deg) scale(1);
+      transform: scale(1);
     }
   }
 

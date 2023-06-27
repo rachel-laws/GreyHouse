@@ -483,11 +483,11 @@ nav .nav__toggle {
   background: transparent;
   transition: 150ms ease;
 }
-nav .nav__toggle:hover {
-  transform: rotate(-5deg) scale(1.13);
+nav .nav__toggle:hover, nav .nav__toggle:focus-visible {
+  transform: scale(1.13);
 }
 nav .nav__toggle:active {
-  transform: rotate(-5deg) scale(1);
+  transform: scale(1);
 }
 @media all and (max-width: 650px) {
   nav .nav__toggle {
