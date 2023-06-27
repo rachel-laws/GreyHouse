@@ -1,3 +1,20 @@
+// Fade In
+
+let isLoaded = false;
+
+window.onload = function fadeInBody() {
+  if (isLoaded) {
+    return;
+  }
+  isLoaded = true;
+  const body = document.body;
+  body.style.opacity = 0;
+
+  setTimeout(function () {
+    body.style.opacity = 1;
+  }, 500);
+};
+
 // Mobile Navigation
 
 const nav = document.querySelector('#navList');
@@ -99,23 +116,6 @@ function changeHeaderImg() {
 }
 
 executeOnLargeScreen(changeHeaderImg);
-
-// Fade In
-
-let isLoaded = false;
-
-window.onload = function fadeInBody() {
-  if (isLoaded) {
-    return;
-  }
-  isLoaded = true;
-  const body = document.body;
-  body.style.opacity = 0;
-
-  setTimeout(function () {
-    body.style.opacity = 1;
-  }, 300);
-};
 
 // Contact Form Submission
 

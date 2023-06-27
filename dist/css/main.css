@@ -18,6 +18,7 @@ img {
 
 body {
   background: linear-gradient(to bottom, #141414, #0d0d0d);
+  transition: 250ms ease;
 }
 
 main {
