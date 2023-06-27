@@ -269,7 +269,8 @@ input[type=submit] {
 @media all and (max-width: 1200px) {
   .reservation {
     margin-inline: 0.5rem;
-    font-size: clamp(1rem, 6vw, 1.3rem);
+    font-size: clamp(1.4rem, 6vw, 1.6rem);
+    padding: 1.75rem 2.25rem;
   }
 }
 .reservation:hover {
@@ -588,8 +589,9 @@ footer {
 @media all and (max-width: 470px) {
   footer {
     padding-top: 1rem;
-    padding-inline: 1rem;
+    padding-inline: 2rem 0rem;
     gap: 1rem;
+    font-size: 0.9rem;
   }
 }
 footer img {

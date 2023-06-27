@@ -24,8 +24,9 @@ footer {
 
   @include mqSmall {
     padding-top: 1rem;
-    padding-inline: 1rem;
+    padding-inline: 2rem 0rem;
     gap: 1rem;
+    font-size: 0.9rem;
   }
 
   img {
