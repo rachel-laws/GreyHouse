@@ -236,6 +236,11 @@ input[type=submit] {
   text-transform: uppercase;
   text-shadow: -1px 1px 8px rgba(127, 127, 127, 0.8);
 }
+@media all and (max-width: 470px) {
+  input[type=submit] {
+    font-size: 1.3rem;
+  }
+}
 
 .form__required {
   font-size: 0.8rem;
@@ -383,13 +388,31 @@ header a {
 @media all and (max-width: 650px) {
   .infobar__container {
     justify-content: center;
+    width: auto;
     margin-left: 5px;
+  }
+}
+@media all and (max-width: 470px) {
+  .infobar__container {
+    width: 12rem;
+    margin: auto;
   }
 }
 
 .infobar {
   display: flex;
   gap: 0.75rem;
+}
+@media all and (max-width: 650px) {
+  .infobar {
+    justify-content: center;
+    width: auto;
+  }
+}
+@media all and (max-width: 470px) {
+  .infobar {
+    gap: 0.25rem;
+  }
 }
 .infobar i {
   margin-top: -2px;
@@ -433,6 +456,12 @@ header a {
 .infobar .email::after {
   content: "|";
   margin-left: 0.75rem;
+}
+@media all and (max-width: 470px) {
+  .infobar .phone::after,
+  .infobar .email::after {
+    margin-left: 0.25rem;
+  }
 }
 
 .instagram i {
@@ -589,7 +618,7 @@ footer {
 @media all and (max-width: 470px) {
   footer {
     padding-top: 1rem;
-    padding-inline: 2rem 0rem;
+    padding-left: 0.5rem;
     gap: 1rem;
     font-size: 0.9rem;
   }
@@ -622,6 +651,13 @@ footer .find-us i,
 footer .hours i {
   font-size: 0.8rem;
 }
+@media all and (max-width: 470px) {
+  footer .find-us,
+  footer .hours {
+    width: 15rem;
+    padding-left: 0.5rem;
+  }
+}
 @media all and (max-width: 1200px) {
   footer .hours {
     grid-column: 1;
@@ -640,8 +676,8 @@ footer .find-us .footer__heading {
   margin-bottom: 0.25rem;
 }
 footer .find-us .footer__heading::after {
-  content: "";
   position: absolute;
+  content: "";
   width: 22%;
   height: 1px;
   left: 0;
@@ -652,8 +688,8 @@ footer .hours .footer__heading {
   margin-bottom: 0.25rem;
 }
 footer .hours .footer__heading::after {
-  content: "";
   position: absolute;
+  content: "";
   width: 17%;
   height: 1px;
   left: 0;
@@ -954,11 +990,11 @@ footer .copyright i {
 }
 .menu h1 {
   position: relative;
-  margin-block: 4rem;
+  margin-block: 2.75rem;
 }
 @media all and (max-width: 1200px) {
   .menu h1 {
-    margin-block: 2.25rem;
+    margin-block: 2rem;
   }
 }
 .menu h1::before {
@@ -1219,7 +1255,7 @@ footer .copyright i {
 }
 .contact h1 {
   position: relative;
-  margin-block: 4rem;
+  margin-block: 3.5rem;
 }
 @media all and (max-width: 1200px) {
   .contact h1 {
@@ -1240,6 +1276,11 @@ footer .copyright i {
     left: -65%;
   }
 }
+@media all and (max-width: 470px) {
+  .contact h1::before {
+    display: none;
+  }
+}
 .contact h1::after {
   position: absolute;
   content: "";
@@ -1252,6 +1293,11 @@ footer .copyright i {
   .contact h1::after {
     width: 50%;
     right: -65%;
+  }
+}
+@media all and (max-width: 470px) {
+  .contact h1::after {
+    display: none;
   }
 }
 .contact form {

@@ -42,13 +42,28 @@ header {
 
   @include mqNavbar {
     justify-content: center;
+    width: auto;
     margin-left: 5px;
+  }
+
+  @include mqSmall {
+    width: 12rem;
+    margin: auto;
   }
 }
 
 .infobar {
   display: flex;
   gap: 0.75rem;
+
+  @include mqNavbar {
+    justify-content: center;
+    width: auto;
+  }
+
+  @include mqSmall {
+    gap: 0.25rem;
+  }
 
   i {
     margin-top: -2px;
@@ -100,6 +115,10 @@ header {
   .email::after {
     content: '|';
     margin-left: 0.75rem;
+
+    @include mqSmall {
+      margin-left: 0.25rem;
+    }
   }
 }
 

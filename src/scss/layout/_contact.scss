@@ -54,6 +54,10 @@
         width: 50%;
         left: -65%;
       }
+
+      @include mqSmall {
+        display: none;
+      }
     }
 
     // Right Accent Line
@@ -69,6 +73,10 @@
       @include mqNavbar {
         width: 50%;
         right: -65%;
+      }
+
+      @include mqSmall {
+        display: none;
       }
     }
   }
