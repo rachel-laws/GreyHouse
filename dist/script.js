@@ -1,14 +1,3 @@
-// Fade In
-
-window.onload = function fadeInBody() {
-  const body = document.body;
-  body.style.opacity = 0;
-
-  setTimeout(function () {
-    body.style.opacity = 1;
-  }, 300);
-};
-
 // Mobile Navigation
 
 const nav = document.querySelector('#navList');
