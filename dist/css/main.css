@@ -362,7 +362,7 @@ header {
 header img {
   max-width: 15rem;
   margin: auto;
-  padding: 0rem 0.5rem 0.5rem;
+  padding: 0rem 0.5rem 0.85rem;
 }
 @media all and (max-width: 650px) {
   header img {
