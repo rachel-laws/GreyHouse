@@ -27,6 +27,7 @@
           <a href="#navbar" class="sr-only">
             Skip link: Skip to navigation bar
           </a>
+          <a href="#menu" class="sr-only"> Skip link: Skip to main content </a>
           <a class="email" href="">
             <span class="sr-only">Email:</span>
             info@grayhouse.com
@@ -57,17 +58,13 @@
         class="logo" />
     </header>
     <nav aria-label="Navigation" id="navbar">
-      <a href="#welcome" class="sr-only">
-        Skip link: Skip to home page content
-      </a>
-      <button id="toggleMobileNav" class="nav__toggle">
+      <button id="toggleMobileNav" class="nav__toggle" aria-controls="navbar">
         <i class="bi bi-list"></i>
+        <span class="sr-only">Navigation</span>
       </button>
       <ul id="navList">
         <li>
-          <a href="https://lawsonwebdevelopment.com/" id="home__link">
-            Home
-          </a>
+          <a href="https://lawsonwebdevelopment.com/" id="home__link"> Home </a>
         </li>
         <li>
           <a href="https://www.lawsonwebdevelopment.com/menu" id="menu__link">
@@ -99,20 +96,20 @@
         </li>
       </ul>
     </nav>
-    <main class="menu">
+    <main class="menu" id="menu">
       <div class="accent__container">
         <div class="accent__left"></div>
         <div class="accent__right"></div>
       </div>
       <div class="menu__container">
-        <h2>Menu</h2>
+        <h1>Menu</h1>
         <div class="menu__grid">
           <img
             src="/assets/branch.svg"
             class="menu__branch branch-left"
             alt="" />
           <div class="menu__title">
-            <h3>Gray House</h3>
+            <h2>Gray House</h2>
             <p>Authentic Mediterranean Cuisine</p>
           </div>
           <img
@@ -121,7 +118,7 @@
             alt="" />
           <div class="menu__appetizers menu__section">
             <div class="col1">
-              <h4 class="menu__heading">Appetizers</h4>
+              <h3 class="menu__heading">Appetizers</h3>
               <div class="menu__item">
                 <p class="menu__name">Beef Carpaccio • € 15</p>
                 <p class="menu__description">
@@ -176,7 +173,7 @@
               </div>
             </div>
             <div class="menu__entrees menu__section">
-              <h4 class="menu__heading">Entrees</h4>
+              <h3 class="menu__heading">Entrees</h3>
               <div class="menu__item">
                 <p class="menu__name">Roasted Branzino • € 23</p>
                 <p class="menu__description">
@@ -249,7 +246,7 @@
               </div>
             </div>
             <div class="menu__sides menu__section">
-              <h4 class="menu__heading">Sides</h4>
+              <h3 class="menu__heading">Sides</h3>
               <div class="menu__item-sides">
                 <p class="menu__item">Mediterranean Orzo • € 5</p>
                 <p class="menu__item">Roasted Vegetables • € 4</p>
@@ -283,7 +280,7 @@
           <div class="col2">
             <div class="menu__soups menu__section">
               <div class="menu__soups-container">
-                <h4 class="menu__heading">Soups & Salads</h4>
+                <h3 class="menu__heading">Soups & Salads</h3>
 
                 <div class="menu__item">
                   <p class="menu__name">Black Cuttlefish Soup • € 6</p>
@@ -347,7 +344,7 @@
               </div>
             </div>
             <div class="menu__desserts menu__section">
-              <h4 class="menu__heading">Desserts</h4>
+              <h3 class="menu__heading">Desserts</h3>
               <div class="menu__item">
                 <p class="menu__name">Hazelnut Madarica • € 6</p>
                 <p class="menu__description">
@@ -399,7 +396,7 @@
             </div>
             <div class="menu__beverages menu__section">
               <div class="menu__beverages-container">
-                <h4 class="menu__heading">Beverages</h4>
+                <h3 class="menu__heading">Beverages</h3>
                 <p>
                   Sparkling Water • Still Water • Peach Iced Tea • Black Tea
                   Green Tea • Coffee • Lemonade • Lemon Water • Sprite • Coca
@@ -415,8 +412,9 @@
             class="reservation"
             target="_blank"
             href="https://www.opentable.com/"
-            >Make a Reservation</a
-          >
+            title="via OpenTable">
+            Make a Reservation
+          </a>
         </div>
       </div>
     </main>

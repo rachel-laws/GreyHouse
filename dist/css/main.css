@@ -166,14 +166,14 @@ h2 {
   text-align: center;
   font-weight: 500;
 }
-.menu__title h3 {
+.menu__title h2 {
   text-transform: uppercase;
   text-align: center;
   font-weight: 500;
   font-size: 2.8rem;
 }
 @media all and (max-width: 1200px) {
-  .menu__title h3 {
+  .menu__title h2 {
     font-size: 2rem;
   }
 }
@@ -465,8 +465,9 @@ nav {
   align-items: center;
   z-index: 9999;
   left: 0;
-  overflow: hidden;
   right: 0;
+  overflow: hidden;
+  min-height: 2.6rem;
   padding: 0.75rem;
   border-top: 1px solid rgba(255, 255, 255, 0.0666666667);
   background: #040404;
@@ -729,18 +730,18 @@ footer .copyright i {
     background-attachment: scroll;
   }
 }
-.home .home__headerImg-container.headerImg-1 {
-  background-image: url("/assets/header_1-medium.png");
+.home .headerImg-1 {
+  background-image: url("/assets/header_1.jpg");
 }
-.home .home__headerImg-container.headerImg-2 {
-  background-image: url("/assets/header_2-medium.png");
+.home .headerImg-2 {
+  background-image: url("/assets/header_2.jpg");
 }
 @media all and (max-width: 650px) {
-  .home .home__headerImg-container.headerImg-1 {
-    background-image: url("/assets/header_1-small.png");
+  .home .headerImg-1 {
+    background-image: url("/assets/header_1-small.jpg");
   }
-  .home .home__headerImg-container.headerImg-2 {
-    background-image: url("/assets/header_2-small.png");
+  .home .headerImg-2 {
+    background-image: url("/assets/header_2-small.jpg");
   }
 }
 .home section {
@@ -948,16 +949,16 @@ footer .copyright i {
   align-items: center;
   overflow: hidden;
 }
-.menu h2 {
+.menu h1 {
   position: relative;
   margin-block: 4rem;
 }
 @media all and (max-width: 1200px) {
-  .menu h2 {
+  .menu h1 {
     margin-block: 2.25rem;
   }
 }
-.menu h2::before {
+.menu h1::before {
   position: absolute;
   content: "";
   border-bottom: 1px solid #f5f5f5;
@@ -966,12 +967,12 @@ footer .copyright i {
   width: 100%;
 }
 @media all and (max-width: 650px) {
-  .menu h2::before {
+  .menu h1::before {
     width: 95%;
     left: -120%;
   }
 }
-.menu h2::after {
+.menu h1::after {
   position: absolute;
   content: "";
   border-bottom: 1px solid #f5f5f5;
@@ -980,7 +981,7 @@ footer .copyright i {
   width: 100%;
 }
 @media all and (max-width: 650px) {
-  .menu h2::after {
+  .menu h1::after {
     width: 95%;
     right: -120%;
   }
@@ -1029,10 +1030,10 @@ footer .copyright i {
   gap: 0.25rem;
   margin-bottom: 1rem;
 }
-.menu .menu__title h3 {
+.menu .menu__title h2 {
   position: relative;
 }
-.menu .menu__title h3::after {
+.menu .menu__title h2::after {
   position: absolute;
   content: "";
   border-bottom: 1px solid #0b0b0b;
@@ -1213,16 +1214,16 @@ footer .copyright i {
     margin-bottom: 4rem;
   }
 }
-.contact h2 {
+.contact h1 {
   position: relative;
   margin-block: 4rem;
 }
 @media all and (max-width: 1200px) {
-  .contact h2 {
+  .contact h1 {
     margin-block: 2.5rem;
   }
 }
-.contact h2::before {
+.contact h1::before {
   position: absolute;
   content: "";
   top: 55%;
@@ -1231,12 +1232,12 @@ footer .copyright i {
   width: 80%;
 }
 @media all and (max-width: 650px) {
-  .contact h2::before {
+  .contact h1::before {
     width: 50%;
     left: -65%;
   }
 }
-.contact h2::after {
+.contact h1::after {
   position: absolute;
   content: "";
   top: 55%;
@@ -1245,7 +1246,7 @@ footer .copyright i {
   border-bottom: 1px solid #f5f5f5;
 }
 @media all and (max-width: 650px) {
-  .contact h2::after {
+  .contact h1::after {
     width: 50%;
     right: -65%;
   }

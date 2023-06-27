@@ -26,17 +26,17 @@
   }
 
   .headerImg-1 {
-    background-image: url('/assets/header_1-medium.png');
+    background-image: url('/assets/header_1.jpg');
   }
   .headerImg-2 {
-    background-image: url('/assets/header_2-medium.png');
+    background-image: url('/assets/header_2.jpg');
   }
   @include mqNavbar {
     .headerImg-1 {
-      background-image: url('/assets/header_1-small.png');
+      background-image: url('/assets/header_1-small.jpg');
     }
     .headerImg-2 {
-      background-image: url('/assets/header_2-small.png');
+      background-image: url('/assets/header_2-small.jpg');
     }
   }
 

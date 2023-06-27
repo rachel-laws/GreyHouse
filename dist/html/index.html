@@ -33,6 +33,9 @@
           <a href="#navbar" class="sr-only">
             Skip link: Skip to navigation bar
           </a>
+          <a href="#welcome" class="sr-only">
+            Skip link: Skip to main content
+          </a>
           <a class="email" href="">
             <span class="sr-only">Email:</span>
             info@grayhouse.com
@@ -63,17 +66,13 @@
         class="logo" />
     </header>
     <nav aria-label="Navigation" id="navbar">
-      <a href="#welcome" class="sr-only">
-        Skip link: Skip to home page content
-      </a>
-      <button id="toggleMobileNav" class="nav__toggle">
+      <button id="toggleMobileNav" class="nav__toggle" aria-controls="navbar">
         <i class="bi bi-list"></i>
+        <span class="sr-only">Navigation</span>
       </button>
       <ul id="navList">
         <li>
-          <a href="https://lawsonwebdevelopment.com/" id="home__link">
-            Home
-          </a>
+          <a href="https://lawsonwebdevelopment.com/" id="home__link"> Home </a>
         </li>
         <li>
           <a href="https://www.lawsonwebdevelopment.com/menu" id="menu__link">
@@ -110,7 +109,7 @@
       <section id="welcome" class="paragraph">
         <div class="home__img-container home__img-container--first">
           <img
-            src="/assets/home_1.png"
+            src="/assets/home_1.jpg"
             alt="Dining table with wine and lobster overlooking the sea"
             class="home__img"
             loading="lazy" />
@@ -172,8 +171,8 @@
         </div>
         <div class="home__img-container">
           <img
-            src="/assets/home_2.png"
-            alt="Dining table with wine and lobster overlooking the sea"
+            src="/assets/home_2.jpg"
+            alt="Overhead view of Zadar, Croatia during sunset"
             class="home__img"
             loading="lazy" />
         </div>
@@ -231,9 +230,13 @@
         </div>
       </section>
       <div id="home__reservation-btn" class="reservation-container">
-        <a class="reservation" target="_blank" href="https://www.opentable.com/"
-          >Make a Reservation</a
-        >
+        <a
+          class="reservation"
+          target="_blank"
+          title="via OpenTable"
+          href="https://www.opentable.com/">
+          Make a Reservation
+        </a>
       </div>
     </main>
     <footer

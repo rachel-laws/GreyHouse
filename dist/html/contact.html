@@ -30,6 +30,9 @@
           <a href="#navbar" class="sr-only">
             Skip link: Skip to navigation bar
           </a>
+          <a href="#contact" class="sr-only">
+            Skip link: Skip to main content
+          </a>
           <a class="email" href="">
             <span class="sr-only">Email:</span>
             info@grayhouse.com
@@ -60,17 +63,13 @@
         class="logo" />
     </header>
     <nav aria-label="Navigation" id="navbar">
-      <a href="#welcome" class="sr-only">
-        Skip link: Skip to home page content
-      </a>
-      <button id="toggleMobileNav" class="nav__toggle">
+      <button id="toggleMobileNav" class="nav__toggle" aria-controls="navbar">
         <i class="bi bi-list"></i>
+        <span class="sr-only">Navigation</span>
       </button>
       <ul id="navList">
         <li>
-          <a href="https://lawsonwebdevelopment.com/" id="home__link">
-            Home
-          </a>
+          <a href="https://lawsonwebdevelopment.com/" id="home__link"> Home </a>
         </li>
         <li>
           <a href="https://www.lawsonwebdevelopment.com/menu" id="menu__link">
@@ -109,7 +108,7 @@
         <div class="accent__right"></div>
       </div>
       <div class="contact__container">
-        <h2 class="contact__heading">Contact Us</h2>
+        <h1 class="contact__heading">Contact Us</h1>
         <form action="" id="contactForm">
           <img src="/assets/lemon_accent.png" alt="" />
           <div class="form__personal-info">

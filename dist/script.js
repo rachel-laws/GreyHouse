@@ -111,7 +111,6 @@ window.onload = function fadeInBody() {
   isLoaded = true;
   const body = document.body;
   body.style.opacity = 0;
-  body.style.animation = 'fadeIn 300ms ease 1';
 
   setTimeout(function () {
     body.style.opacity = 1;
