@@ -23,8 +23,25 @@ mobileNavBtn.addEventListener('click', e => {
 // Active Page Underline
 
 document.addEventListener('DOMContentLoaded', function () {
+  const rewrittenHomeURL = 'https://www.lawsonwebdevelopment.com/';
+  const rewrittenMenuURL = 'https://www.lawsonwebdevelopment.com/menu';
+  const rewrittenContactURL = 'https://www.lawsonwebdevelopment.com/contact';
+
   document.querySelectorAll('nav a').forEach(link => {
-    if (link.href === window.location.href) {
+    if (
+      link.href === rewrittenHomeURL &&
+      window.location.href === rewrittenHomeURL
+    ) {
+      link.setAttribute('aria-current', 'page');
+    } else if (
+      link.href === rewrittenMenuURL &&
+      window.location.href === rewrittenMenuURL
+    ) {
+      link.setAttribute('aria-current', 'page');
+    } else if (
+      link.href === rewrittenContactURL &&
+      window.location.href === rewrittenContactURL
+    ) {
       link.setAttribute('aria-current', 'page');
     }
   });
@@ -54,7 +71,12 @@ function preloadImages(imageSources) {
   }
 }
 
-const headerImageSources = ['/assets/header_1.jpg', '/assets/header_2.jpg'];
+const headerImageSources = [
+  '/assets/header_1-small.png',
+  '/assets/header_2-small.png',
+  '/assets/header_1-medium.png',
+  '/assets/header_2-medium.png',
+];
 
 preloadImages(headerImageSources);
 
@@ -67,17 +89,10 @@ function executeOnLargeScreen(callback) {
 function changeHeaderImg() {
   const headerImg = document.querySelector('.home__headerImg-container');
   if (headerImg) {
-    const headerImgSrc = [
-      'url("/assets/header_1.jpg")',
-      'url("/assets/header_2.jpg")',
-    ];
-
-    let currentIndex = 0;
-
     setInterval(function () {
-      headerImg.style.backgroundImage = headerImgSrc[currentIndex];
-      currentIndex = (currentIndex + 1) % headerImgSrc.length;
-    }, 12000);
+      headerImg.classList.toggle('headerImg-2');
+      headerImg.classList.toggle('headerImg-1');
+    }, 24000);
   }
 }
 
@@ -98,7 +113,6 @@ window.onload = function fadeInBody() {
 
   setTimeout(function () {
     body.style.opacity = 1;
-    console.log('hi');
   }, 300);
 };
 

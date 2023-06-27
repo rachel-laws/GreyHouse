@@ -25,19 +25,17 @@
     transition: background-image 2000ms ease;
   }
 
-  .home__headerImg-container.headerImg-1 {
+  .headerImg-1 {
     background-image: url('/assets/header_1-medium.png');
   }
-
-  .home__headerImg-container.headerImg-2 {
+  .headerImg-2 {
     background-image: url('/assets/header_2-medium.png');
   }
   @include mqNavbar {
-    .home__headerImg-container.headerImg-1 {
+    .headerImg-1 {
       background-image: url('/assets/header_1-small.png');
     }
-
-    .home__headerImg-container.headerImg-2 {
+    .headerImg-2 {
       background-image: url('/assets/header_2-small.png');
     }
   }
