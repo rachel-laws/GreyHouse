@@ -74,10 +74,11 @@ function preloadImages(imageSources) {
 }
 
 const headerImageSources = [
-  '/assets/header_1-small.png',
-  '/assets/header_2-small.png',
-  '/assets/header_1-medium.png',
-  '/assets/header_2-medium.png',
+  '/assets/header_1-small.jpg',
+  '/assets/header_2-small.jpg',
+  '/assets/header_1.jpg',
+  '/assets/header_2.jpg',
+  '/assets/contact.jpg',
 ];
 
 preloadImages(headerImageSources);

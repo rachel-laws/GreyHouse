@@ -35,10 +35,6 @@ main {
   width: 1px;
 }
 
-.preload {
-  display: none !important;
-}
-
 .accent__container {
   position: fixed;
   inset: 0;
