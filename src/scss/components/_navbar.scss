@@ -16,6 +16,7 @@ nav {
   left: 0;
   right: 0;
   overflow: hidden;
+  transition: 200ms ease;
 
   min-height: 2.6rem;
 
@@ -82,18 +83,20 @@ nav {
   }
 
   .showMobileNav {
+    animation: slideIn 300ms forwards;
+
+    a {
+      display: block !important;
+    }
+
     @include mqNavbar {
       @include flexCenterCol;
       gap: 1rem;
     }
   }
 
-  .showMobileNav {
-    animation: slideIn 0.3s forwards;
-
-    a {
-      display: block !important;
-    }
+  .hideMobileNav {
+    animation: slideOut 300ms forwards;
   }
 
   li {

@@ -106,3 +106,12 @@ main {
     transform: translateY(0);
   }
 }
+
+@keyframes slideOut {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}

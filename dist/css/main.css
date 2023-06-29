@@ -101,6 +101,14 @@ main {
     transform: translateY(0);
   }
 }
+@keyframes slideOut {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
 html {
   font-family: "Belleza", sans-serif;
 }
@@ -504,6 +512,7 @@ nav {
   left: 0;
   right: 0;
   overflow: hidden;
+  transition: 200ms ease;
   min-height: 2.6rem;
   padding: 0.75rem;
   border-top: 1px solid rgba(255, 255, 255, 0.0666666667);
@@ -558,6 +567,12 @@ nav ul {
     display: none;
   }
 }
+nav .showMobileNav {
+  animation: slideIn 300ms forwards;
+}
+nav .showMobileNav a {
+  display: block !important;
+}
 @media all and (max-width: 650px) {
   nav .showMobileNav {
     display: flex;
@@ -567,11 +582,8 @@ nav ul {
     gap: 1rem;
   }
 }
-nav .showMobileNav {
-  animation: slideIn 0.3s forwards;
-}
-nav .showMobileNav a {
-  display: block !important;
+nav .hideMobileNav {
+  animation: slideOut 300ms forwards;
 }
 nav li {
   list-style: none;
@@ -791,7 +803,7 @@ footer .copyright i {
 }
 .home section {
   margin-inline: 14vw;
-  margin-bottom: 6rem;
+  margin-bottom: 7rem;
 }
 .home section:last-of-type {
   margin-bottom: 3.5rem;
@@ -824,10 +836,6 @@ footer .copyright i {
   .home .paragraph h2 {
     text-align: center;
   }
-}
-.home .paragraph h2 .next-line {
-  display: block;
-  color: red;
 }
 @media all and (max-width: 1200px) {
   .home .paragraph {

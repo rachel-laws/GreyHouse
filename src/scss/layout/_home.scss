@@ -25,12 +25,15 @@
     transition: background-image 2000ms ease;
   }
 
+  // Header Image Sources
+
   .headerImg-1 {
     background-image: url('/assets/header_1.jpg');
   }
   .headerImg-2 {
     background-image: url('/assets/header_2.jpg');
   }
+
   @include mqNavbar {
     .headerImg-1 {
       background-image: url('/assets/header_1-small.jpg');
@@ -74,11 +77,6 @@
 
       @include mqSmall {
         text-align: center;
-      }
-
-      .next-line {
-        display: block;
-        color: red;
       }
     }
 
