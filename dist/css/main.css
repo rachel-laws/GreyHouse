@@ -922,7 +922,8 @@ footer .copyright i {
 }
 @media all and (max-width: 650px) {
   .reviews {
-    margin-top: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
   }
 }
 @media all and (min-width: 3000px) {
