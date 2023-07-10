@@ -64,9 +64,9 @@ const showNavbar = nav => {
 // Active Page Underline
 
 document.addEventListener('DOMContentLoaded', function () {
-  const rewrittenHomeURL = 'https://lawsonwebdevelopment.com/';
-  const rewrittenMenuURL = 'https://www.lawsonwebdevelopment.com/menu';
-  const rewrittenContactURL = 'https://www.lawsonwebdevelopment.com/contact';
+  const rewrittenHomeURL = 'https://grayhousedemo.com/';
+  const rewrittenMenuURL = 'https://www.grayhousedemo.com/menu';
+  const rewrittenContactURL = 'https://www.grayhousedemo.com/contact';
 
   document.querySelectorAll('nav a').forEach(link => {
     const href = link.getAttribute('href');
